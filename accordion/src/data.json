@@ -1,0 +1,556 @@
+{
+    "faqs" : [
+        {
+            "question": "What is Netflix?",
+            "answer": "Netflix is a streaming service that offers a wide variety of TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices."
+        },
+        {
+            "question": "How much does Netflix cost?",
+            "answer": "Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from $8.99 to $17.99 a month. No extra costs, no contracts."
+        },
+        {
+            "question": "Where can I watch?",
+            "answer": "Watch anywhere, anytime, on an unlimited number of devices. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, such as smart TVs, smartphones, tablets, streaming media players, and game consoles."
+        },
+        {
+            "question": "How do I cancel?",
+            "answer": "Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime."
+        },
+        {
+            "question": "What can I watch on Netflix?",
+            "answer": "Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want."
+        },
+        {
+            "question": "Is Netflix good for kids?",
+            "answer": "The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and movies in their own space. Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see."
+        },
+        {
+            "question": "What is Amazon Prime?",
+            "answer": "Amazon Prime is a paid subscription service offered by Amazon that gives users access to services that would otherwise be unavailable, or cost extra, to the typical Amazon customer. This includes free two-day delivery, streaming music and video, and other benefits."
+        },
+        {
+            "question": "How much does Amazon Prime cost?",
+            "answer": "Amazon Prime costs $12.99 per month or $119 per year. Amazon Prime Video costs $8.99 per month."
+        },
+        {
+            "question": "Where can I watch Amazon Prime?",
+            "answer": "Amazon Prime Video is available on a wide variety of devices, including smart TVs, tablets, smartphones, and computers. You can also watch on your computer through a web browser."
+        },
+        {
+            "question": "How do I cancel Amazon Prime?",
+            "answer": "To cancel your Amazon Prime membership, go to Manage Prime Membership. Depending on whether you have a paid membership or are on a free trial, do one of the following: To end a paid membership, click End membership, which is the second option on the left-hand side of the page."
+        },
+        {
+            "question": "What can I watch on Amazon Prime?",
+            "answer": "Amazon Prime Video offers access to thousands of movies and TV shows, including popular licensed and self-produced content."
+        },
+        {
+            "question": "Is Amazon Prime good for kids?",
+            "answer": "Amazon Prime Video offers a wide variety of kids' TV shows and movies, including popular licensed and self-produced content. Parents can set up a Kids profile to restrict the content their children can access."
+        },
+        {
+            "question": "What is Disney+?",
+            "answer": "Disney+ is a subscription video on-demand streaming service owned and operated by the Direct-to-Consumer & International division of The Walt Disney Company."
+        },
+        {
+            "question": "How much does Disney+ cost?",
+            "answer": "Disney+ costs $7.99 per month or $79.99 per year. Disney+ also offers a bundle with Hulu and ESPN+ for $13.99 per month."
+        },
+        {
+            "question": "Where can I watch Disney+?",
+            "answer": "Disney+ is available on a wide variety of devices, including smart TVs, tablets, smartphones, and computers. You can also watch on your computer through a web browser."
+        },
+        {
+            "question": "How do I cancel Disney+?",
+            "answer": "To cancel your Disney+ subscription, go to your account settings and click on the 'Cancel Subscription' button. You will be asked to confirm your cancellation, and your subscription will be canceled at the end of your current billing cycle."
+        },
+        {
+            "question": "What can I watch on Disney+?",
+            "answer": "Disney+ offers access to a wide variety of movies and TV shows from Disney, Pixar, Marvel, Star Wars, and National Geographic. This includes popular licensed content as well as exclusive original content."
+        },
+        {
+            "question": "Is Disney+ good for kids?",
+            "answer": "Disney+ offers a wide variety of kids' TV shows and movies from Disney, Pixar, Marvel, Star Wars, and National Geographic. Parents can set up a Kids profile to restrict the content their children can access."
+        },
+        {
+            "question": "What is Hulu?",
+            "answer": "Hulu is a subscription video on-demand streaming service that offers a wide variety of TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices."
+        },
+        {
+            "question": "How much does Hulu cost?",
+            "answer": "Hulu offers several different subscription plans, ranging from $5.99 to $64.99 per month. The cost of Hulu varies depending on the plan you choose and whether you opt for the ad-supported or ad-free version."
+        },
+        {
+            "question": "Where can I watch Hulu?",
+            "answer": "Hulu is available on a wide variety of devices, including smart TVs, tablets, smartphones, and computers. You can also watch on your computer through a web browser."
+        },
+        {
+            "question": "How do I cancel Hulu?",
+            "answer": "To cancel your Hulu subscription, go to your account settings and click on the 'Cancel Subscription' button. You will be asked to confirm your cancellation, and your subscription will be canceled at the end of your current billing cycle."
+        },
+        {
+            "question": "What can I watch on Hulu?",
+            "answer": "Hulu offers access to thousands of movies and TV shows, including popular licensed and self-produced content. Hulu also offers live TV streaming and access to premium channels like HBO and Showtime."
+        },
+        {
+            "question": "Is Hulu good for kids?",
+            "answer": "Hulu offers a wide variety of kids' TV shows and movies, including popular licensed and self-produced content. Parents can set up a Kids profile to restrict the content their children can access."
+        },
+        {
+            "question": "What is HBO Max?",
+            "answer": "HBO Max is a subscription video on-demand streaming service that offers access to a wide variety of movies and TV shows, including popular licensed and self-produced content."
+        },
+        {
+            "question": "How much does HBO Max cost?",
+            "answer": "HBO Max costs $14.99 per month. HBO Max also offers a discounted ad-supported plan for $9.99 per month."
+        },
+        {
+            "question": "Where can I watch HBO Max?",
+            "answer": "HBO Max is available on a wide variety of devices, including smart TVs, tablets, smartphones, and computers. You can also watch on your computer through a web browser."
+        },
+        {
+            "question": "How do I cancel HBO Max?",
+            "answer": "To cancel your HBO Max subscription, go to your account settings and click on the 'Cancel Subscription' button. You will be asked to confirm your cancellation, and your subscription will be canceled at the end of your current billing cycle."
+        },
+        {
+            "question": "What can I watch on HBO Max?",
+            "answer": "HBO Max offers access to thousands of movies and TV shows, including popular licensed and self-produced content. HBO Max also offers access to premium channels like HBO and Showtime."
+        },
+        {
+            "question": "Is HBO Max good for kids?",
+            "answer": "HBO Max offers a wide variety of kids' TV shows and movies, including popular licensed and self-produced content. Parents can set up a Kids profile to restrict the content their children can access."
+        },
+        {
+            "question": "What is Apple TV+?",
+            "answer": "Apple TV+ is a subscription video on-demand streaming service that offers access to a wide variety of movies and TV shows, including popular licensed and self-produced content."
+        },
+        {
+            "question": "How much does Apple TV+ cost?",
+            "answer": "Apple TV+ costs $4.99 per month. Apple TV+ also offers a discounted annual plan for $49.99 per year."
+        },
+        {
+            "question": "Where can I watch Apple TV+?",
+            "answer": "Apple TV+ is available on a wide variety of devices, including smart TVs, tablets, smartphones, and computers. You can also watch on your computer through a web browser."
+        },
+        {
+            "question": "How do I cancel Apple TV+?",
+            "answer": "To cancel your Apple TV+ subscription, go to your account settings and click on the 'Cancel Subscription' button. You will be asked to confirm your cancellation, and your subscription will be canceled at the end of your current billing cycle."
+        },
+        {
+            "question": "What can I watch on Apple TV+?",
+            "answer": "Apple TV+ offers access to a wide variety of movies and TV shows, including popular licensed and self-produced content. Apple TV+ also offers access to premium channels like HBO and Showtime."
+        },
+        {
+            "question": "Is Apple TV+ good for kids?",
+            "answer": "Apple TV+ offers a wide variety of kids' TV shows and movies, including popular licensed and self-produced content. Parents can set up a Kids profile to restrict the content their children can access."
+        },
+        {
+            "question": "What is Peacock?",
+            "answer": "Peacock is a subscription video on-demand streaming service that offers access to a wide variety of movies and TV shows, including popular licensed and self-produced content."
+        },
+        {
+            "question": "How much does Peacock cost?",
+            "answer": "Peacock offers several different subscription plans, ranging from $4.99 to $9.99 per month. The cost of Peacock varies depending on the plan you choose and whether you opt for the ad-supported or ad-free version."
+        },
+        {
+            "question": "Where can I watch Peacock?",
+            "answer": "Peacock is available on a wide variety of devices, including smart TVs, tablets, smartphones, and computers. You can also watch on your computer through a web browser."
+        },
+        {
+            "question": "How do I cancel Peacock?",
+            "answer": "To cancel your Peacock subscription, go to your account settings and click on the 'Cancel Subscription' button. You will be asked to confirm your cancellation, and your subscription will be canceled at the end of your current billing cycle."
+        },
+        {
+            "question": "What can I watch on Peacock?",
+            "answer": "Peacock offers access to thousands of movies and TV shows, including popular licensed and self-produced content. Peacock also offers live TV streaming and access to premium channels like HBO and Showtime."
+        },
+        {
+            "question": "Is Peacock good for kids?",
+            "answer": "Peacock offers a wide variety of kids' TV shows and movies, including popular licensed and self-produced content. Parents can set up a Kids profile to restrict the content their children can access."
+        },
+        {
+            "question": "What is Discovery+?",
+            "answer": "Discovery+ is a subscription video on-demand streaming service that offers access to a wide variety of movies and TV shows, including popular licensed and self-produced content."
+        },
+        {
+            "question": "How much does Discovery+ cost?",
+            "answer": "Discovery+ offers several different subscription plans, ranging from $4.99 to $6.99 per month. The cost of Discovery+ varies depending on the plan you choose and whether you opt for the ad-supported or ad-free version."
+        },
+        {
+            "question": "Where can I watch Discovery+?",
+            "answer": "Discovery+ is available on a wide variety of devices, including smart TVs, tablets, smartphones, and computers. You can also watch on your computer through a web browser."
+        },
+        {
+            "question": "How do I cancel Discovery+?",
+            "answer": "To cancel your Discovery+ subscription, go to your account settings and click on the 'Cancel Subscription' button. You will be asked to confirm your cancellation, and your subscription will be canceled at the end of your current billing cycle."
+        },
+        {
+            "question": "What can I watch on Discovery+?",
+            "answer": "Discovery+ offers access to thousands of movies and TV shows, including popular licensed and self-produced content. Discovery+ also offers live TV streaming and access to premium channels like HBO and Showtime."
+        },
+        {
+            "question": "Is Discovery+ good for kids?",
+            "answer": "Discovery+ offers a wide variety of kids' TV shows and movies, including popular licensed and self-produced content. Parents can set up a Kids profile to restrict the content their children can access."
+        },
+        {
+            "question": "What is Paramount+?",
+            "answer": "Paramount+ is a subscription video on-demand streaming service that offers access to a wide variety of movies and TV shows, including popular licensed and self-produced content."
+        },
+        {
+            "question": "How much does Paramount+ cost?",
+            "answer": "Paramount+ offers several different subscription plans, ranging from $4.99 to $9.99 per month. The cost of Paramount+ varies depending on the plan you choose and whether you opt for the ad-supported or ad-free version."
+        },
+        {
+            "question": "Where can I watch Paramount+?",
+            "answer": "Paramount+ is available on a wide variety of devices, including smart TVs, tablets, smartphones, and computers. You can also watch on your computer through a web browser."
+        },
+        {
+            "question": "How do I cancel Paramount+?",
+            "answer": "To cancel your Paramount+ subscription, go to your account settings and click on the 'Cancel Subscription' button. You will be asked to confirm your cancellation, and your subscription will be canceled at the end of your current billing cycle."
+        },
+        {
+            "question": "What can I watch on Paramount+?",
+            "answer": "Paramount+ offers access to thousands of movies and TV shows, including popular licensed and self-produced content. Paramount+ also offers live TV streaming and access to premium channels like HBO and Showtime."
+        },
+        {
+            "question": "Is Paramount+ good for kids?",
+            "answer": "Paramount+ offers a wide variety of kids' TV shows and movies, including popular licensed and self-produced content. Parents can set up a Kids profile to restrict the content their children can access."
+        },
+        {
+            "question": "What is ESPN+?",
+            "answer": "ESPN+ is a subscription video on-demand streaming service that offers access to a wide variety of sports content, including live games, replays, and original programming."
+        },
+        {
+            "question": "How much does ESPN+ cost?",
+            "answer": "ESPN+ costs $5.99 per month or $59.99 per year. ESPN+ also offers a bundle with Hulu and Disney+ for $13.99 per month."
+        },
+        {
+            "question": "Where can I watch ESPN+?",
+            "answer": "ESPN+ is available on a wide variety of devices, including smart TVs, tablets, smartphones, and computers. You can also watch on your computer through a web browser."
+        },
+        {
+            "question": "How do I cancel ESPN+?",
+            "answer": "To cancel your ESPN+ subscription, go to your account settings and click on the 'Cancel Subscription' button. You will be asked to confirm your cancellation, and your subscription will be canceled at the end of your current billing cycle."
+        },
+        {
+            "question": "What can I watch on ESPN+?",
+            "answer": "ESPN+ offers access to a wide variety of sports content, including live games, replays, and original programming. ESPN+ also offers access to premium channels like HBO and Showtime."
+        },
+        {
+            "question": "Is ESPN+ good for kids?",
+            "answer": "ESPN+ offers a wide variety of sports content, including live games, replays, and original programming. Parents can set up a Kids profile to restrict the content their children can access."
+        },
+        {
+            "question": "What is Showtime?",
+            "answer": "Showtime is a subscription video on-demand streaming service that offers access to a wide variety of movies and TV shows, including popular licensed and self-produced content."
+        },
+        {
+            "question": "How much does Showtime cost?",
+            "answer": "Showtime costs $10.99 per month. Showtime also offers a discounted annual plan for $99 per year."
+        },
+        {
+            "question": "Where can I watch Showtime?",
+            "answer": "Showtime is available on a wide variety of devices, including smart TVs, tablets, smartphones, and computers. You can also watch on your computer through a web browser."
+        },
+        {
+            "question": "How do I cancel Showtime?",
+            "answer": "To cancel your Showtime subscription, go to your account settings and click on the 'Cancel Subscription' button. You will be asked to confirm your cancellation, and your subscription will be canceled at the end of your current billing cycle."
+        },
+        {
+            "question": "What can I watch on Showtime?",
+            "answer": "Showtime offers access to thousands of movies and TV shows, including popular licensed and self-produced content. Showtime also offers access to premium channels like HBO and ESPN+."
+        },
+        {
+            "question": "Is Showtime good for kids?",
+            "answer": "Showtime offers a wide variety of kids' TV shows and movies, including popular licensed and self-produced content. Parents can set up a Kids profile to restrict the content their children can access."
+        },
+        {
+            "question": "What is Starz?",
+            "answer": "Starz is a subscription video on-demand streaming service that offers access to a wide variety of movies and TV shows, including popular licensed and self-produced content."
+        },
+        {
+            "question": "How much does Starz cost?",
+            "answer": "Starz costs $8.99 per month. Starz also offers a discounted annual plan for $74.99 per year."
+        },
+        {
+            "question": "Where can I watch Starz?",
+            "answer": "Starz is available on a wide variety of devices, including smart TVs, tablets, smartphones, and computers. You can also watch on your computer through a web browser."
+        },
+        {
+            "question": "How do I cancel Starz?",
+            "answer": "To cancel your Starz subscription, go to your account settings and click on the 'Cancel Subscription' button. You will be asked to confirm your cancellation, and your subscription will be canceled at the end of your current billing cycle."
+        },
+        {
+            "question": "What can I watch on Starz?",
+            "answer": "Starz offers access to thousands of movies and TV shows, including popular licensed and self-produced content. Starz also offers access to premium channels like HBO and Showtime."
+        },
+        {
+            "question": "Is Starz good for kids?",
+            "answer": "Starz offers a wide variety of kids' TV shows and movies, including popular licensed and self-produced content. Parents can set up a Kids profile to restrict the content their children can access."
+        },
+        {
+            "question": "What is CBS All Access?",
+            "answer": "CBS All Access is a subscription video on-demand streaming service that offers access to a wide variety of movies and TV shows, including popular licensed and self-produced content."
+        },
+        {
+            "question": "How much does CBS All Access cost?",
+            "answer": "CBS All Access costs $5.99 per month. CBS All Access also offers a discounted annual plan for $59.99 per year."
+        },
+        {
+            "question": "Where can I watch CBS All Access?",
+            "answer": "CBS All Access is available on a wide variety of devices, including smart TVs, tablets, smartphones, and computers. You can also watch on your computer through a web browser."
+        },
+        {
+            "question": "How do I cancel CBS All Access?",
+            "answer": "To cancel your CBS All Access subscription, go to your account settings and click on the 'Cancel Subscription' button. You will be asked to confirm your cancellation, and your subscription will be canceled at the end of your current billing cycle."
+        },
+        {
+            "question": "What can I watch on CBS All Access?",
+            "answer": "CBS All Access offers access to thousands of movies and TV shows, including popular licensed and self-produced content. CBS All Access also offers access to premium channels like HBO and Showtime."
+        },
+        {
+            "question": "Is CBS All Access good for kids?",
+            "answer": "CBS All Access offers a wide variety of kids' TV shows and movies, including popular licensed and self-produced content. Parents can set up a Kids profile to restrict the content their children can access."
+        },
+        {
+            "question": "What is Crunchyroll?",
+            "answer": "Crunchyroll is a subscription video on-demand streaming service that offers access to a wide variety of anime content, including popular licensed and self-produced content."
+        },
+        {
+            "question": "How much does Crunchyroll cost?",
+            "answer": "Crunchyroll offers several different subscription plans, ranging from $7.99 to $14.99 per month. The cost of Crunchyroll varies depending on the plan you choose and whether you opt for the ad-supported or ad-free version."
+        },
+        {
+            "question": "Where can I watch Crunchyroll?",
+            "answer": "Crunchyroll is available on a wide variety of devices, including smart TVs, tablets, smartphones, and computers. You can also watch on your computer through a web browser."
+        },
+        {
+            "question": "How do I cancel Crunchyroll?",
+            "answer": "To cancel your Crunchyroll subscription, go to your account settings and click on the 'Cancel Subscription' button. You will be asked to confirm your cancellation, and your subscription will be canceled at the end of your current billing cycle."
+        },
+        {
+            "question": "What can I watch on Crunchyroll?",
+            "answer": "Crunchyroll offers access to thousands of anime shows and movies, including popular licensed and self-produced content. Crunchyroll also offers access to premium channels like HBO and Showtime."
+        },
+        {
+            "question": "Is Crunchyroll good for kids?",
+            "answer": "Crunchyroll offers a wide variety of kids' anime shows and movies, including popular licensed and self-produced content. Parents can set up a Kids profile to restrict the content their children can access."
+        },
+        {
+            "question": "What is Funimation?",
+            "answer": "Funimation is a subscription video on-demand streaming service that offers access to a wide variety of anime content, including popular licensed and self-produced content."
+        },
+        {
+            "question": "How much does Funimation cost?",
+            "answer": "Funimation offers several different subscription plans, ranging from $5.99 to $7.99 per month. The cost of Funimation varies depending on the plan you choose and whether you opt for the ad-supported or ad-free version."
+        },
+        {
+            "question": "Where can I watch Funimation?",
+            "answer": "Funimation is available on a wide variety of devices, including smart TVs, tablets, smartphones, and computers. You can also watch on your computer through a web browser."
+        },
+        {
+            "question": "How do I cancel Funimation?",
+            "answer": "To cancel your Funimation subscription, go to your account settings and click on the 'Cancel Subscription' button. You will be asked to confirm your cancellation, and your subscription will be canceled at the end of your current billing cycle."
+        },
+        {
+            "question": "What can I watch on Funimation?",
+            "answer": "Funimation offers access to thousands of anime shows and movies, including popular licensed and self-produced content. Funimation also offers access to premium channels like HBO and Showtime."
+        },
+        {
+            "question": "Is Funimation good for kids?",
+            "answer": "Funimation offers a wide variety of kids' anime shows and movies, including popular licensed and self-produced content. Parents can set up a Kids profile to restrict the content their children can access."
+        },
+        {
+            "question": "What is VRV?",
+            "answer": "VRV is a subscription video on-demand streaming service that offers access to a wide variety of anime and other content, including popular licensed and self-produced content."
+        },
+        {
+            "question": "How much does VRV cost?",
+            "answer": "VRV offers several different subscription plans, ranging from $9.99 to $14.99 per month. The cost of VRV varies depending on the plan you choose and whether you opt for the ad-supported or ad-free version."
+        },
+        {
+            "question": "Where can I watch VRV?",
+            "answer": "VRV is available on a wide variety of devices, including smart TVs, tablets, smartphones, and computers. You can also watch on your computer through a web browser."
+        },
+        {
+            "question": "How do I cancel VRV?",
+            "answer": "To cancel your VRV subscription, go to your account settings and click on the 'Cancel Subscription' button. You will be asked to confirm your cancellation, and your subscription will be canceled at the end of your current billing cycle."
+        },
+        {
+            "question": "What can I watch on VRV?",
+            "answer": "VRV offers access to thousands of anime shows and movies, including popular licensed and self-produced content. VRV also offers access to premium channels like HBO and Showtime."
+        },
+        {
+            "question": "Is VRV good for kids?",
+            "answer": "VRV offers a wide variety of kids' anime shows and movies, including popular licensed and self-produced content. Parents can set up a Kids profile to restrict the content their children can access."
+        },
+        {
+            "question": "What is Shudder?",
+            "answer": "Shudder is a subscription video on-demand streaming service that offers access to a wide variety of horror content, including movies, TV shows, and documentaries."
+        },
+        {
+            "question": "How much does Shudder cost?",
+            "answer": "Shudder costs $5.99 per month or $56.99 per year. Shudder also offers a discounted annual plan for $56.99 per year."
+        },
+        {
+            "question": "Where can I watch Shudder?",
+            "answer": "Shudder is available on a wide variety of devices, including smart TVs, tablets, smartphones, and computers. You can also watch on your computer through a web browser."
+        },
+        {
+            "question": "How do I cancel Shudder?",
+            "answer": "To cancel your Shudder subscription, go to your account settings and click on the 'Cancel Subscription' button. You will be asked to confirm your cancellation, and your subscription will be canceled at the end of your current billing cycle."
+        },
+        {
+            "question": "What can I watch on Shudder?",
+            "answer": "Shudder offers access to thousands of horror movies, TV shows, and documentaries, including popular licensed and self-produced content. Shudder also offers access to premium channels like HBO and Showtime."
+        },
+        {
+            "question": "Is Shudder good for kids?",
+            "answer": "Shudder offers a wide variety of horror content, including movies, TV shows, and documentaries. Parents can set up a Kids profile to restrict the content their children can access."
+        },
+        {
+            "question": "What is BritBox?",
+            "answer": "BritBox is a subscription video on-demand streaming service that offers access to a wide variety of British TV shows and movies, including popular licensed and self-produced content."
+        },
+        {
+            "question": "How much does BritBox cost?",
+            "answer": "BritBox costs $6.99 per month or $69.99 per year. BritBox also offers a discounted annual plan for $69.99 per year."
+        },
+        {
+            "question": "Where can I watch BritBox?",
+            "answer": "BritBox is available on a wide variety of devices, including smart TVs, tablets, smartphones, and computers. You can also watch on your computer through a web browser."
+        },
+        {
+            "question": "How do I cancel BritBox?",
+            "answer": "To cancel your BritBox subscription, go to your account settings and click on the 'Cancel Subscription' button. You will be asked to confirm your cancellation, and your subscription will be canceled at the end of your current billing cycle."
+        },
+        {
+            "question": "What can I watch on BritBox?",
+            "answer": "BritBox offers access to thousands of British TV shows and movies, including popular licensed and self-produced content. BritBox also offers access to premium channels like HBO and Showtime."
+        },
+        {
+            "question": "Is BritBox good for kids?",
+            "answer": "BritBox offers a wide variety of British TV shows and movies, including popular licensed and self-produced content. Parents can set up a Kids profile to restrict the content their children can access."
+        },
+        {
+            "question": "What is Acorn TV?",
+            "answer": "Acorn TV is a subscription video on-demand streaming service that offers access to a wide variety of British TV shows and movies, including popular licensed and self-produced content."
+        },
+        {
+            "question": "How much does Acorn TV cost?",
+            "answer": "Acorn TV costs $5.99 per month or $59.99 per year. Acorn TV also offers a discounted annual plan for $59.99 per year."
+        },
+        {
+            "question": "Where can I watch Acorn TV?",
+            "answer": "Acorn TV is available on a wide variety of devices, including smart TVs, tablets, smartphones, and computers. You can also watch on your computer through a web browser."
+        },
+        {
+            "question": "How do I cancel Acorn TV?",
+            "answer": "To cancel your Acorn TV subscription, go to your account settings and click on the 'Cancel Subscription' button. You will be asked to confirm your cancellation, and your subscription will be canceled at the end of your current billing cycle."
+        },
+        {
+            "question": "What can I watch on Acorn TV?",
+            "answer": "Acorn TV offers access to thousands of British TV shows and movies, including popular licensed and self-produced content. Acorn TV also offers access to premium channels like HBO and Showtime."
+        },
+        {
+            "question": "Is Acorn TV good for kids?",
+            "answer": "Acorn TV offers a wide variety of British TV shows and movies, including popular licensed and self-produced content. Parents can set up a Kids profile to restrict the content their children can access."
+        },
+        {
+            "question": "What is Sundance Now?",
+            "answer": "Sundance Now is a subscription video on-demand streaming service that offers access to a wide variety of independent films, documentaries, and TV shows."
+        },
+        {
+            "question": "How much does Sundance Now cost?",
+            "answer": "Sundance Now costs $6.99 per month or $59.99 per year. Sundance Now also offers a discounted annual plan for $59.99 per year."
+        },
+        {
+            "question": "Where can I watch Sundance Now?",
+            "answer": "Sundance Now is available on a wide variety of devices, including smart TVs, tablets, smartphones, and computers. You can also watch on your computer through a web browser."
+        },
+        {
+            "question": "How do I cancel Sundance Now?",
+            "answer": "To cancel your Sundance Now subscription, go to your account settings and click on the 'Cancel Subscription' button. You will be asked to confirm your cancellation, and your subscription will be canceled at the end of your current billing cycle."
+        },
+        {
+            "question": "What can I watch on Sundance Now?",
+            "answer": "Sundance Now offers access to thousands of independent films, documentaries, and TV shows, including popular licensed and self-produced content. Sundance Now also offers access to premium channels like HBO and Showtime."
+        },
+        {
+            "question": "Is Sundance Now good for kids?",
+            "answer": "Sundance Now offers a wide variety of independent films, documentaries, and TV shows. Parents can set up a Kids profile to restrict the content their children can access."
+        },
+        {
+            "question": "What is Mubi?",
+            "answer": "Mubi is a subscription video on-demand streaming service that offers access to a wide variety of independent films, documentaries, and TV shows."
+        },
+        {
+            "question": "How much does Mubi cost?",
+            "answer": "Mubi costs $10.99 per month or $95.88 per year. Mubi also offers a discounted annual plan for $95.88 per year."
+        },
+        {
+            "question": "Where can I watch Mubi?",
+            "answer": "Mubi is available on a wide variety of devices, including smart TVs, tablets, smartphones, and computers. You can also watch on your computer through a web browser."
+        },
+        {
+            "question": "How do I cancel Mubi?",
+            "answer": "To cancel your Mubi subscription, go to your account settings and click on the 'Cancel Subscription' button. You will be asked to confirm your cancellation, and your subscription will be canceled at the end of your current billing cycle."
+        },
+        {
+            "question": "What can I watch on Mubi?",
+            "answer": "Mubi offers access to thousands of independent films, documentaries, and TV shows, including popular licensed and self-produced content. Mubi also offers access to premium channels like HBO and Showtime."
+        },
+        {
+            "question": "Is Mubi good for kids?",
+            "answer": "Mubi offers a wide variety of independent films, documentaries, and TV shows. Parents can set up a Kids profile to restrict the content their children can access."
+        },
+        {
+            "question": "What is The Criterion Channel?",
+            "answer": "The Criterion Channel is a subscription video on-demand streaming service that offers access to a wide variety of classic and contemporary films, documentaries, and TV shows."
+        },
+        {
+            "question": "How much does The Criterion Channel cost?",
+            "answer": "The Criterion Channel costs $10.99 per month or $99.99 per year. The Criterion Channel also offers a discounted annual plan for $99.99 per year."
+        },
+        {
+            "question": "Where can I watch The Criterion Channel?",
+            "answer": "The Criterion Channel is available on a wide variety of devices, including smart TVs, tablets, smartphones, and computers. You can also watch on your computer through a web browser."
+        },
+        {
+            "question": "How do I cancel The Criterion Channel?",
+            "answer": "To cancel your The Criterion Channel subscription, go to your account settings and click on the 'Cancel Subscription' button. You will be asked to confirm your cancellation, and your subscription will be canceled at the end of your current billing cycle."
+        },
+        {
+            "question": "What can I watch on The Criterion Channel?",
+            "answer": "The Criterion Channel offers access to thousands of classic and contemporary films, documentaries, and TV shows, including popular licensed and self-produced content. The Criterion Channel also offers access to premium channels like HBO and Showtime."
+        },
+        {
+            "question": "Is The Criterion Channel good for kids?",
+            "answer": "The Criterion Channel offers a wide variety of classic and contemporary films, documentaries, and TV shows. Parents can set up a Kids profile to restrict the content their children can access."
+        },
+        {
+            "question": "What is Kanopy?",
+            "answer": "Kanopy is a subscription video on-demand streaming service that offers access to a wide variety of independent films, documentaries, and TV shows."
+        },
+        {
+            "question": "How much does Kanopy cost?",
+            "answer": "Kanopy is free for users with a library card from a participating library. Users can access a limited number of titles per month, depending on their library's agreement with Kanopy."
+        },
+        {
+            "question": "Where can I watch Kanopy?",
+            "answer": "Kanopy is available on a wide variety of devices, including smart TVs, tablets, smartphones, and computers. You can also watch on your computer through a web browser."
+        },
+        {
+            "question": "How do I cancel Kanopy?",
+            "answer": "To cancel your Kanopy subscription, go to your account settings and click on the 'Cancel Subscription' button. You will be asked to confirm your cancellation, and your subscription will be canceled at the end of your current billing cycle."
+        },
+        {
+            "question": "What can I watch on Kanopy?",
+            "answer": "Kanopy offers access to thousands of independent films, documentaries, and TV shows, including popular licensed and self-produced content. Kanopy also offers access to premium channels like HBO and Showtime."
+        },
+        {
+            "question": "Is Kanopy good for kids?",
+            "answer": "Kanopy offers a wide variety of independent films, documentaries, and TV shows. Parents can set up a Kids profile to restrict the content their children can access."
+        }
+    ]
+}
