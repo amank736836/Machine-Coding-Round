@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+.accordion{
+  border : 2px solid black;
+  border-radius: 5px;
+  margin: 0.5rem;
+  position: relative;
+}
+
+span{
+  position: absolute;
+  right: 0.5rem;
+  top:  1rem;
+  cursor: pointer;
+}
