@@ -1,0 +1,117 @@
+{
+    "name" : "File Explorer",
+    "type" : "folder",
+    "children" : [
+        {
+            "name" : "node_modules",
+            "type" : "folder",
+            "children" : [
+                {
+                    "name" : "react",
+                    "type" : "folder",
+                    "children" : []
+                },
+                {
+                    "name" : "react-dom",
+                    "type" : "folder",
+                    "children" : []
+                }
+            ]
+        },
+        {
+            "name" : "src",
+            "type" : "folder",
+            "children" : [
+                {
+                    "name" : "components",
+                    "type" : "folder",
+                    "children" : [
+                        {
+                            "name" : "Header.js",
+                            "type" : "file"
+                        },
+                        {
+                            "name" : "Footer.js",
+                            "type" : "file"
+                        },
+                        {
+                            "name" : "Sidebar.js",
+                            "type" : "file"
+                        }
+                    ]
+                },
+                {
+                    "name" : "App.js",
+                    "type" : "file"
+                },
+                {
+                    "name" : "index.js",
+                    "type" : "file"
+                },
+                {
+                    "name" : "serviceWorker.js",
+                    "type" : "file"
+                },
+                {
+                    "name" : "index.css",
+                    "type" : "file"
+                },
+                {
+                    "name" : "App.test.js",
+                    "type" : "file"
+                },
+                {
+                    "name" : "logo.svg",
+                    "type" : "file"
+                },
+                {
+                    "name" : "setupTests.js",
+                    "type" : "file"
+                },
+                {
+                    "name" : "reportWebVitals.js",
+                    "type" : "file"
+                }
+            ]
+        },
+        {
+            "name" : "public",
+            "type" : "folder",
+            "children" : [
+                {
+                    "name" : "index.html",
+                    "type" : "file"
+                },
+                {
+                    "name" : "favicon.ico",
+                    "type" : "file"
+                },
+                {
+                    "name" : "manifest.json",
+                    "type" : "file"
+                },
+                {
+                    "name" : "robots.txt",
+                    "type" : "file"
+                }
+            ]
+        },
+        {
+            "name" : "package.json",
+            "type" : "file"
+        },
+        {
+            "name" : "README.md",
+            "type" : "file"
+        },
+        {
+            "name" : ".gitignore",
+            "type" : "file"
+        },
+        {
+            "name" : "package-lock.json",
+            "type" : "file"
+        }
+
+    ]
+}
