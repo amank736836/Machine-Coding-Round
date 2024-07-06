@@ -8,7 +8,7 @@ const [showChildren , setShowChildren] = useState(false);
       <h3
       onClick={() => setShowChildren(!showChildren)}
       >
-        {folderData.type === "folder" ? (showChildren ? "📂" : "📁") : "📄"}
+        {folderData.type === "folder" ? (showChildren ? "🔽 📂" : "▶️ 📁") : "📄"}
         <span>{folderData.name}</span>
       </h3>
       { showChildren &&
