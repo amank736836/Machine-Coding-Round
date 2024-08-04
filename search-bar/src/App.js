@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import TypeAhead from './Components/TypeAhead';
 
