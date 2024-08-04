@@ -10,7 +10,7 @@ function App() {
       {/* <Input 
       // size={size} setSize={setSize} 
       /> */}
-      <TicTacToe size={5} />
+      <TicTacToe size={3} />
     </div>
   );
 }
