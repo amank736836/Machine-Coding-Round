@@ -1,3 +1,27 @@
-.App {
-  text-align: center;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  margin: 0;
+}
+
+.container {
+  height: 15rem;
+  width: 15rem;
+  border: 2px solid black;
+  display: grid;
+}
+
+.cell {
+  /* border: 0.5px solid black; */
+}
+
+.food {
+  background-color: red;
+  border-radius: 50%;
+}
+
+.snake {
+  background-color: green; 
 }
