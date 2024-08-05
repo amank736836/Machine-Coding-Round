@@ -1,0 +1,80 @@
+.toast-container {
+  position: fixed;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+.toast {
+  background-color: rgb(212, 42, 42);
+  width: 18rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: rgb(0, 0, 0);
+  border: 4px double rgb(0, 0, 0);
+  position: relative;
+  animation: slide 1s ease;
+  transition: all 0.5s;
+  margin-bottom: 1rem;
+  font-size: large;
+  font-weight: bold;
+  button {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.2rem;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-weight: bolder;
+    font-style: italic;
+    color: white;
+    font-size: small;
+  }
+
+  button:hover {
+    color: red;
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.btn-container {
+  display: flex;
+  margin-top: 3rem;
+  margin-left: 5rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  font-size: x-large;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border: 3px star rgb(0, 0, 0);
+}
+
+button:hover {
+  background-color: lightgray;
+}
+
+.success {
+  background-color: rgb(82, 255, 82);
+}
+
+.error {
+  background-color: rgb(255, 69, 69);
+}
+
+.warning {
+  background-color: rgb(252, 236, 98);
+}
+
+.info {
+  background-color: rgb(88, 202, 255);
+}
