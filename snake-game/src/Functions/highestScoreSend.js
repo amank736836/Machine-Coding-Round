@@ -13,6 +13,7 @@ const highestScoreSend = async ({ user, score }) => {
     }
   ).then((response) => {
     console.log(response);
+    console.log(response.json());
     console.log("Data sent");
   });
 };
