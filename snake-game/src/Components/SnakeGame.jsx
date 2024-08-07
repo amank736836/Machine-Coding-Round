@@ -130,28 +130,34 @@ export default function SnakeGame() {
   const [user, setUser] = useState("");
 
   const highestScoresSend = () => {
-    const data = fetch("http://localhost:3005/snakeScore", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name: user,
-        score: score,
-      }),
-    });
+    const data = fetch(
+      "https://machine-coding-round-bsrq.onrender.com/snakeGame",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: user,
+          score: score,
+        }),
+      }
+    );
   };
 
   const [scores, setScores] = useState([]);
 
   const highestScores = async () => {
     try {
-      const data = await fetch("http://localhost:3005/snakeScore");
+      const data = await fetch(
+        "https://machine-coding-round-bsrq.onrender.com/snakeGame"
+      );
       const scores = await data.json();
+      console.log(data);
+      console.log(scores);
       setScores(scores);
       console.log(scores);
-    }
-    catch (error) {
+    } catch (error) {
       console.log(error);
     }
   };
@@ -220,6 +226,14 @@ export default function SnakeGame() {
       </div>
       <div>
         <h3>Highest Scores</h3>
+        {scores.map((score, index) => (
+          <div key={index} className="score">
+            <p>
+              {index + 1}. {score.name}
+            </p>
+            <p>{score.score}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
