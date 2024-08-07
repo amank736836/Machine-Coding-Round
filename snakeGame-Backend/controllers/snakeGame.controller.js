@@ -39,7 +39,7 @@ const addScore = async (req, res) => {
     //   }
     // }
 
-    res.status(201).json({ message: "Score added/updated successfully." });
+    res.status(201).json({ message: "Score added/updated successfully." , allScores});
   } catch (error) {
     res.status(400).json({ message: error.message });
   }
