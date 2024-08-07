@@ -10,17 +10,27 @@ const getScore = async (req, res) => {
 };
 
 const addScore = async (req, res) => {
-  const score = new Score({
-    name: req.body.name,
-    score: req.body.score,
-  });
+  const { name, score } = req.body;
 
   try {
-    const newScore = await score.save();
+    let existingScore = await Score.findOne({ name });
+
+    if (existingScore) {
+      if (score > existingScore.score) {
+        existingScore.score = score;
+        await existingScore.save();
+      } else {
+        return res
+          .status(200)
+          .json({ message: "Score not high enough to update." });
+      }
+    } else {
+      const newScore = new Score({ name, score });
+      await newScore.save();
+    }
 
     const allScores = await Score.find().sort({ score: -1 });
 
-    // If there are more than 5 scores, remove the lowest ones
     if (allScores.length > 5) {
       const scoresToRemove = allScores.slice(5);
       for (let scoreToRemove of scoresToRemove) {
@@ -28,7 +38,7 @@ const addScore = async (req, res) => {
       }
     }
 
-    res.status(201).json(newScore);
+    res.status(201).json({ message: "Score added/updated successfully." });
   } catch (error) {
     res.status(400).json({ message: error.message });
   }
