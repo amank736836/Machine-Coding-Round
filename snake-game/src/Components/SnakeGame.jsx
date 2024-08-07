@@ -45,6 +45,7 @@ export default function SnakeGame() {
             .some(([x, y]) => x === newHead[0] && y === newHead[1])
         ) {
           highestScoreSend({ user, score: score.current });
+          updateLocalStorage({ user, score: score.current });
           console.log("Game Over");
           score.current = 0;
           return [...initialSnakeBody];
@@ -75,6 +76,12 @@ export default function SnakeGame() {
         return copySnakeBody;
       });
     }, 75 - score.current);
+  };
+
+  const updateLocalStorage = ({ user, score }) => {
+    const scores = [...AllScores, { name: user, score }];
+    scores.sort((a, b) => b.score - a.score);
+    setAllScores(scores.slice(0, 5));
   };
 
   const handleDirection = (e) => {
@@ -134,10 +141,9 @@ export default function SnakeGame() {
   return (
     <div className="container">
       <div className="title">
-        <h1>Snake Game</h1>
-      </div>
-      <div>
-        <h3>Score : {score.current}</h3>
+        <div className="gameName">Snake Game</div>
+        <div className="name">{user}</div>
+        <div className="scoreCard">Score : {score.current}</div>
       </div>
       <div
         className="container-game"
