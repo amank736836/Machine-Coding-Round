@@ -31,7 +31,6 @@ export default function SnakeGame() {
   const foodRef = useRef(generateFood());
 
   const runSnake = () => {
-    console.log("Run Snake");
     interval.current = setInterval(() => {
       setSnakeBody((prevSnakeBody) => {
         const copySnakeBody = [...prevSnakeBody];
@@ -45,8 +44,6 @@ export default function SnakeGame() {
             .slice(1)
             .some(([x, y]) => x === newHead[0] && y === newHead[1])
         ) {
-          console.log(user);
-          console.log(score);
           highestScoreSend({ user, score: score.current });
           console.log("Game Over");
           score.current = 0;
@@ -113,7 +110,6 @@ export default function SnakeGame() {
   };
 
   useEffect(() => {
-    console.log("Score : ", score);
     if (score.current === 0) {
       clearInterval(interval.current);
       interval.current = null;
