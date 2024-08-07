@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import highestScoreSend from "../Functions/highestScoreSend";
 
 export default function SnakeGame() {
   const [GRID_SIZE, setGRID_SIZE] = useState(20);
@@ -8,12 +9,12 @@ export default function SnakeGame() {
 
   const initialSnakeBody = [
     [5, 5],
-    [6, 5],
-    [7, 5],
   ];
 
   const [snakeBody, setSnakeBody] = useState([...initialSnakeBody]);
+  const [user, setUser] = useState("");
   const [score, setScore] = useState(0);
+  const [AllScores, setAllScores] = useState([]);
   const [alert, setAlert] = useState(false);
 
   const directionRef = useRef([1, 0]);
@@ -31,15 +32,6 @@ export default function SnakeGame() {
 
   const foodRef = useRef(generateFood());
 
-  useEffect(() => {
-    if (score === 0) {
-      clearInterval(interval.current);
-      interval.current = null;
-    } else if (score % 10 === 0) {
-      runSnake();
-    }
-  }, [score]);
-
   const runSnake = () => {
     interval.current = setInterval(() => {
       setSnakeBody((prevSnakeBody) => {
@@ -50,9 +42,12 @@ export default function SnakeGame() {
         ];
 
         if (
-          copySnakeBody.some(([x, y]) => x === newHead[0] && y === newHead[1])
+          copySnakeBody
+            .slice(1)
+            .some(([x, y]) => x === newHead[0] && y === newHead[1])
         ) {
-          highestScoresSend();
+          highestScoreSend({ user, score });
+          console.log("Game Over");
           setScore(0);
           return [...initialSnakeBody];
         }
@@ -95,7 +90,7 @@ export default function SnakeGame() {
         copySnakeBody.unshift(newHead);
         return copySnakeBody;
       });
-      console.log(interval);
+      // console.log(interval);
     }, 75 + score * 10);
   };
 
@@ -113,6 +108,31 @@ export default function SnakeGame() {
     }
   };
 
+  const isSnakeBodyDiv = (xc, yc) => {
+    return snakeBody.some(([x, y]) => x === xc && y === yc);
+  };
+
+  const highestScores = async () => {
+    try {
+      const data = await fetch(
+        "https://machine-coding-round-bsrq.onrender.com/snakeGame"
+      );
+      const scores = await data.json();
+      setAllScores(scores);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    if (score === 0) {
+      clearInterval(interval.current);
+      interval.current = null;
+    } else if (score % 10 === 0) {
+      runSnake();
+    }
+  }, [score]);
+
   useEffect(() => {
     highestScores();
     window.addEventListener("keydown", handleDirection);
@@ -122,45 +142,6 @@ export default function SnakeGame() {
       window.removeEventListener("keydown", handleDirection);
     };
   }, []);
-
-  const isSnakeBodyDiv = (xc, yc) => {
-    return snakeBody.some(([x, y]) => x === xc && y === yc);
-  };
-
-  const [user, setUser] = useState("");
-
-  const highestScoresSend = () => {
-    const data = fetch(
-      "https://machine-coding-round-bsrq.onrender.com/snakeGame",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: user,
-          score: score,
-        }),
-      }
-    );
-  };
-
-  const [scores, setScores] = useState([]);
-
-  const highestScores = async () => {
-    try {
-      const data = await fetch(
-        "https://machine-coding-round-bsrq.onrender.com/snakeGame"
-      );
-      const scores = await data.json();
-      console.log(data);
-      console.log(scores);
-      setScores(scores);
-      console.log(scores);
-    } catch (error) {
-      console.log(error);
-    }
-  };
 
   return (
     <div className="container">
@@ -226,7 +207,7 @@ export default function SnakeGame() {
       </div>
       <div>
         <h3>Highest Scores</h3>
-        {scores.map((score, index) => (
+        {AllScores.map((score, index) => (
           <div key={index} className="score">
             <p>
               {index + 1}. {score.name}
