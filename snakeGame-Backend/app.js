@@ -6,7 +6,6 @@ const port = process.env.PORT || 3000;
 const snakeGameRouter = require('./routes/snakeGame.routes.js');
 
 const allowedOrigins = [
-    'http://localhost:3000',
     'https://amank736836-snake.vercel.app',
     'https://snake-amank736836.vercel.app',
     'https://machine-coding-round-1.onrender.com'
