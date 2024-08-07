@@ -36,6 +36,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   margin-top: 10px;
 }
+
+.buttons button{
+  height: 50px;
+  font-size: 20px;
+  background-color: rgb(84, 194, 84);
+  color: white;
+}
+
