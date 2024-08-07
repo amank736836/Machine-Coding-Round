@@ -1,20 +1,10 @@
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50vh;
-  margin: 0;
-}
-
-.container {
-  height: 15rem;
-  width: 15rem;
+.container-game {
   border: 2px solid black;
   display: grid;
 }
 
 .cell {
-  /* border: 0.5px solid black; */
+  /* border: 0.1px solid black; */
 }
 
 .food {
@@ -23,5 +13,21 @@ body {
 }
 
 .snake {
-  background-color: green; 
+  background-color: green;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.start{
+  display: block;
+  width: 100%;
+  height: 45.5%;
+  font-size: 145px;
+  background-color: green;
+  color: white;
 }
