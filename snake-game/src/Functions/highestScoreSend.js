@@ -11,11 +11,10 @@ const highestScoreSend = async ({ user, score }) => {
         score: score,
       }),
     }
-  ).then((response) => {
-    console.log(response);
-    console.log(response.json());
-    console.log("Data sent");
-  });
+  )
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    .catch((error) => console.error("Error:", error));
 };
 
 export default highestScoreSend;
