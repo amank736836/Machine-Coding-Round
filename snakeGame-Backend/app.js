@@ -16,6 +16,10 @@ app.use(cors(
     {
         origin: 'https://snake-amank736836.vercel.app/',
         credentials: true
+    },
+    {
+        origin: 'https://machine-coding-round-1.onrender.com/',
+        credentials: true
     }
 ));
 
