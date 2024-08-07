@@ -9,6 +9,13 @@ app.use(cors(
     {
         origin: 'http://localhost:3000',
         credentials: true
+    },{
+        origin: 'https://amank736836-snake.vercel.app/',
+        credentials: true
+    },
+    {
+        origin: 'https://snake-amank736836.vercel.app/',
+        credentials: true
     }
 ));
 
