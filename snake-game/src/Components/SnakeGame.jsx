@@ -169,7 +169,12 @@ export default function SnakeGame() {
               className="user"
               value={user}
               onChange={(e) => {
-                setUser(e.target.value.substring(0, 10));
+                setUser(e.target.value.substring(0, 20));
+              }}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && user.trim() !== "") {
+                  runSnake();
+                }
               }}
             />
             {alert && <p className="alert">Please enter your name</p>}
