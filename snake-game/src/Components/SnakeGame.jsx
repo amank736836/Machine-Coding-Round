@@ -1,20 +1,23 @@
 import { useEffect, useRef, useState } from "react";
 
 export default function SnakeGame() {
-  const [GRID_SIZE, setGRID_SIZE] = useState(15);
+  const [GRID_SIZE, setGRID_SIZE] = useState(20);
   const GRIDGAME = Array.from({ length: GRID_SIZE }, () =>
     new Array(GRID_SIZE).fill("")
   );
 
   const initialSnakeBody = [
     [5, 5],
-    // [6, 5],
-    // [7, 5],
+    [6, 5],
+    [7, 5],
   ];
 
   const [snakeBody, setSnakeBody] = useState([...initialSnakeBody]);
+  const [score, setScore] = useState(0);
+  const [alert, setAlert] = useState(false);
 
   const directionRef = useRef([1, 0]);
+  const interval = useRef(null);
 
   const generateFood = () => {
     const x = Math.floor(Math.random() * GRID_SIZE);
@@ -29,7 +32,16 @@ export default function SnakeGame() {
   const foodRef = useRef(generateFood());
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    if (score === 0) {
+      clearInterval(interval.current);
+      interval.current = null;
+    } else if (score % 10 === 0) {
+      runSnake();
+    }
+  }, [score]);
+
+  const runSnake = () => {
+    interval.current = setInterval(() => {
       setSnakeBody((prevSnakeBody) => {
         const copySnakeBody = [...prevSnakeBody];
         const newHead = [
@@ -40,6 +52,8 @@ export default function SnakeGame() {
         if (
           copySnakeBody.some(([x, y]) => x === newHead[0] && y === newHead[1])
         ) {
+          highestScoresSend();
+          setScore(0);
           return [...initialSnakeBody];
         }
 
@@ -48,6 +62,7 @@ export default function SnakeGame() {
           newHead[1] === foodRef.current[1]
         ) {
           foodRef.current = generateFood();
+          setScore((prevScore) => prevScore + 1);
         } else {
           copySnakeBody.pop();
         }
@@ -80,25 +95,30 @@ export default function SnakeGame() {
         copySnakeBody.unshift(newHead);
         return copySnakeBody;
       });
-    }, 100);
+      console.log(interval);
+    }, 75 + score * 10);
+  };
 
-    const handleDirection = (e) => {
-      const key = e.key;
-      console.log(key);
-      if (key === "ArrowUp" && directionRef.current[1] === 0) {
-        directionRef.current = [0, -1];
-      } else if (key === "ArrowDown" && directionRef.current[1] === 0) {
-        directionRef.current = [0, 1];
-      } else if (key === "ArrowLeft" && directionRef.current[0] === 0) {
-        directionRef.current = [-1, 0];
-      } else if (key === "ArrowRight" && directionRef.current[0] === 0) {
-        directionRef.current = [1, 0];
-      }
-    };
+  const handleDirection = (e) => {
+    const key = e.key;
+    // console.log(key);
+    if (key === "ArrowUp" && directionRef.current[1] === 0) {
+      directionRef.current = [0, -1];
+    } else if (key === "ArrowDown" && directionRef.current[1] === 0) {
+      directionRef.current = [0, 1];
+    } else if (key === "ArrowLeft" && directionRef.current[0] === 0) {
+      directionRef.current = [-1, 0];
+    } else if (key === "ArrowRight" && directionRef.current[0] === 0) {
+      directionRef.current = [1, 0];
+    }
+  };
 
+  useEffect(() => {
+    highestScores();
     window.addEventListener("keydown", handleDirection);
+
     return () => {
-      clearInterval(interval);
+      clearInterval(interval.current);
       window.removeEventListener("keydown", handleDirection);
     };
   }, []);
@@ -107,18 +127,86 @@ export default function SnakeGame() {
     return snakeBody.some(([x, y]) => x === xc && y === yc);
   };
 
+  const [user, setUser] = useState("");
+
+  const highestScoresSend = () => {
+    const data = fetch("http://localhost:3005/snakeScore", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: user,
+        score: score,
+      }),
+    });
+  };
+
+  const [scores, setScores] = useState([]);
+
+  const highestScores = async () => {
+    try {
+      const data = await fetch("http://localhost:3005/snakeScore");
+      const scores = await data.json();
+      setScores(scores);
+      console.log(scores);
+    }
+    catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
-    <div
-      className="container"
-      style={{
-        gridTemplateColumns: `repeat(${GRID_SIZE}, 1fr)`,
-      }}
-    >
-      {GRIDGAME.map((row, yc) =>
-        row.map((cell, xc) => (
-          <div
-            key={`${xc} * ${GRID_SIZE} + ${yc}`}
-            className={`cell
+    <div className="container">
+      <div className="title">
+        <h1>Snake Game</h1>
+      </div>
+      <div>
+        <h3>Score : {score}</h3>
+      </div>
+      <div
+        className="container-game"
+        style={{
+          gridTemplateColumns: `repeat(${GRID_SIZE}, 1fr)`,
+          height: `${GRID_SIZE}rem`,
+          width: `${GRID_SIZE}rem`,
+        }}
+      >
+        {interval.current == null && (
+          <div className="inputs">
+            <input
+              type="button"
+              value="Start"
+              onClick={
+                user === ""
+                  ? () => {
+                      setAlert(true);
+                    }
+                  : () => {
+                      runSnake();
+                    }
+              }
+              className="start"
+            />
+            <input
+              type="text"
+              placeholder="Enter your name"
+              className="user"
+              value={user}
+              onChange={(e) => {
+                setUser(e.target.value.substring(0, 10));
+              }}
+            />
+            {alert && <p className="alert">Please enter your name</p>}
+          </div>
+        )}
+
+        {interval.current !== null &&
+          GRIDGAME.map((row, yc) =>
+            row.map((cell, xc) => (
+              <div
+                key={`${xc} * ${GRID_SIZE} + ${yc}`}
+                className={`cell
             ${isSnakeBodyDiv(xc, yc) ? "snake" : ""}
             ${
               foodRef.current[0] === xc && foodRef.current[1] === yc
@@ -126,9 +214,13 @@ export default function SnakeGame() {
                 : ""
             }
             `}
-          ></div>
-        ))
-      )}
+              ></div>
+            ))
+          )}
+      </div>
+      <div>
+        <h3>Highest Scores</h3>
+      </div>
     </div>
   );
 }
