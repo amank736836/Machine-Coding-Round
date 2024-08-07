@@ -47,3 +47,19 @@
   color: white;
 }
 
+.up button{
+  width: 216px;
+}
+
+.down button{
+  width: 216px;
+}
+
+button{
+  margin-top: 5px;
+}
+
+.leftright button{
+  width: 100px;
+}
+
