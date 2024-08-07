@@ -30,7 +30,7 @@ const addScore = async (req, res) => {
     }
 
     const allScores = await Score.find().sort({ score: -1 })
-    console.log(allScores);
+    // console.log(allScores);
 
     if (allScores.length > 5) {
       const scoresToRemove = allScores.slice(5);
