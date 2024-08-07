@@ -206,15 +206,47 @@ export default function SnakeGame() {
       </div>
       <div className="buttons">
         <div className="up">
-          <button onClick={() => (directionRef.current = [0, -1])}>⬆️</button>
+          <button
+            onClick={() => {
+              if (directionRef.current[1] === 0) {
+                directionRef.current = [0, -1];
+              }
+            }}
+          >
+            ⬆️
+          </button>
         </div>
         <div className="leftright">
-          <button onClick={() => (directionRef.current = [-1, 0])}>⬅️</button>
+          <button
+            onClick={() => {
+              if (directionRef.current[0] === 0) {
+                directionRef.current = [-1, 0];
+              }
+            }}
+          >
+            ⬅️
+          </button>
           <button disabled>🫰</button>
-          <button onClick={() => (directionRef.current = [1, 0])}>➡️</button>
+          <button
+            onClick={() => {
+              if (directionRef.current[0] === 0) {
+                directionRef.current = [1, 0];
+              }
+            }}
+          >
+            ➡️
+          </button>
         </div>
         <div className="down">
-          <button onClick={() => (directionRef.current = [0, 1])}>⬇️</button>
+          <button
+            onClick={() => {
+              if (directionRef.current[1] === 0) {
+                directionRef.current = [0, 1];
+              }
+            }}
+          >
+            ⬇️
+          </button>
         </div>
       </div>
       <div>
