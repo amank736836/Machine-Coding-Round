@@ -5,23 +5,24 @@ const port = process.env.PORT || 3000;
 
 const snakeGameRouter = require('./routes/snakeGame.routes.js');
 
-app.use(cors(
-    {
-        origin: 'http://localhost:3000',
-        credentials: true
-    },{
-        origin: 'https://amank736836-snake.vercel.app/',
-        credentials: true
+const allowedOrigins = [
+    'http://localhost:3000',
+    'https://amank736836-snake.vercel.app',
+    'https://snake-amank736836.vercel.app',
+    'https://machine-coding-round-1.onrender.com'
+];
+
+app.use(cors({
+    origin: function (origin, callback) {
+        if (!origin) return callback(null, true);
+        if (allowedOrigins.indexOf(origin) === -1) {
+            const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
+            return callback(new Error(msg), false);
+        }
+        return callback(null, true);
     },
-    {
-        origin: 'https://snake-amank736836.vercel.app/',
-        credentials: true
-    },
-    {
-        origin: 'https://machine-coding-round-1.onrender.com/',
-        credentials: true
-    }
-));
+    credentials: true
+}));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
