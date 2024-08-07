@@ -7,18 +7,16 @@ export default function SnakeGame() {
     new Array(GRID_SIZE).fill("")
   );
 
-  const initialSnakeBody = [
-    [5, 5],
-  ];
+  const initialSnakeBody = [[5, 5]];
 
   const [snakeBody, setSnakeBody] = useState([...initialSnakeBody]);
   const [user, setUser] = useState("");
-  const [score, setScore] = useState(0);
   const [AllScores, setAllScores] = useState([]);
   const [alert, setAlert] = useState(false);
 
   const directionRef = useRef([1, 0]);
   const interval = useRef(null);
+  const score = useRef(0);
 
   const generateFood = () => {
     const x = Math.floor(Math.random() * GRID_SIZE);
@@ -33,6 +31,7 @@ export default function SnakeGame() {
   const foodRef = useRef(generateFood());
 
   const runSnake = () => {
+    console.log("Run Snake");
     interval.current = setInterval(() => {
       setSnakeBody((prevSnakeBody) => {
         const copySnakeBody = [...prevSnakeBody];
@@ -46,9 +45,11 @@ export default function SnakeGame() {
             .slice(1)
             .some(([x, y]) => x === newHead[0] && y === newHead[1])
         ) {
-          highestScoreSend({ user, score });
+          console.log(user);
+          console.log(score);
+          highestScoreSend({ user, score: score.current });
           console.log("Game Over");
-          setScore(0);
+          score.current = 0;
           return [...initialSnakeBody];
         }
 
@@ -57,7 +58,7 @@ export default function SnakeGame() {
           newHead[1] === foodRef.current[1]
         ) {
           foodRef.current = generateFood();
-          setScore((prevScore) => prevScore + 1);
+          score.current += 1;
         } else {
           copySnakeBody.pop();
         }
@@ -73,30 +74,17 @@ export default function SnakeGame() {
         if (newHead[1] >= GRID_SIZE) {
           newHead[1] = 0;
         }
-        // if (
-        //   (newHead[0] < 0) |
-        //   (newHead[0] >= GRID_SIZE) |
-        //   (newHead[1] < 0) |
-        //   (newHead[1] >= GRID_SIZE)
-        // ) {
-        //   //   clearInterval(interval);
-        //   // return prevSnakeBody;
-        //   return [
-        //     [5, 5],
-        //     [6, 5],
-        //     [7, 5],
-        //   ];
-        // }
         copySnakeBody.unshift(newHead);
         return copySnakeBody;
       });
-      // console.log(interval);
-    }, 75 + score * 10);
+    }, 75 - score.current);
   };
 
   const handleDirection = (e) => {
     const key = e.key;
-    // console.log(key);
+    if (interval.current === null && user.trim() !== "") {
+      runSnake();
+    }
     if (key === "ArrowUp" && directionRef.current[1] === 0) {
       directionRef.current = [0, -1];
     } else if (key === "ArrowDown" && directionRef.current[1] === 0) {
@@ -125,13 +113,16 @@ export default function SnakeGame() {
   };
 
   useEffect(() => {
-    if (score === 0) {
+    console.log("Score : ", score);
+    if (score.current === 0) {
       clearInterval(interval.current);
       interval.current = null;
-    } else if (score % 10 === 0) {
+    } else {
+      clearInterval(interval.current);
+      interval.current = null;
       runSnake();
     }
-  }, [score]);
+  }, [score.current]);
 
   useEffect(() => {
     highestScores();
@@ -139,6 +130,7 @@ export default function SnakeGame() {
 
     return () => {
       clearInterval(interval.current);
+      interval.current = null;
       window.removeEventListener("keydown", handleDirection);
     };
   }, []);
@@ -149,7 +141,7 @@ export default function SnakeGame() {
         <h1>Snake Game</h1>
       </div>
       <div>
-        <h3>Score : {score}</h3>
+        <h3>Score : {score.current}</h3>
       </div>
       <div
         className="container-game"
@@ -210,9 +202,8 @@ export default function SnakeGame() {
         {AllScores.map((score, index) => (
           <div key={index} className="score">
             <p>
-              {index + 1}. {score.name}
+              {index + 1}. {score.name} - {score.score}
             </p>
-            <p>{score.score}</p>
           </div>
         ))}
       </div>
