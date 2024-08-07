@@ -193,6 +193,18 @@ export default function SnakeGame() {
             ))
           )}
       </div>
+      <div className="buttons">
+        <div className="up">
+          <button onClick={() => (directionRef.current = [0, -1])}>⬆️</button>
+        </div>
+        <div className="leftright">
+          <button onClick={() => (directionRef.current = [-1, 0])}>⬅️</button>
+          <button onClick={() => (directionRef.current = [1, 0])}>➡️</button>
+        </div>
+        <div className="down">
+          <button onClick={() => (directionRef.current = [0, 1])}>⬇️</button>
+        </div>
+      </div>
       <div>
         <h3>Highest Scores</h3>
         {AllScores.map((score, index) => (
