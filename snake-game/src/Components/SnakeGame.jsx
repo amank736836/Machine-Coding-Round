@@ -75,7 +75,7 @@ export default function SnakeGame() {
         copySnakeBody.unshift(newHead);
         return copySnakeBody;
       });
-    }, 75 - score.current);
+    }, 85 - score.current);
   };
 
   const updateLocalStorage = ({ user, score }) => {
@@ -86,6 +86,7 @@ export default function SnakeGame() {
 
   const handleDirection = (e) => {
     const key = e.key;
+    console.log(interval.current);
     if (interval.current === null && user.trim() !== "") {
       runSnake();
     }
@@ -208,6 +209,9 @@ export default function SnakeGame() {
         <div className="up">
           <button
             onClick={() => {
+              if (interval.current === null && user.trim() !== "") {
+                runSnake();
+              }
               if (directionRef.current[1] === 0) {
                 directionRef.current = [0, -1];
               }
@@ -219,6 +223,9 @@ export default function SnakeGame() {
         <div className="leftright">
           <button
             onClick={() => {
+              if (interval.current === null && user.trim() !== "") {
+                runSnake();
+              }
               if (directionRef.current[0] === 0) {
                 directionRef.current = [-1, 0];
               }
@@ -229,6 +236,9 @@ export default function SnakeGame() {
           <button disabled>🫰</button>
           <button
             onClick={() => {
+              if (interval.current === null && user.trim() !== "") {
+                runSnake();
+              }
               if (directionRef.current[0] === 0) {
                 directionRef.current = [1, 0];
               }
@@ -240,6 +250,9 @@ export default function SnakeGame() {
         <div className="down">
           <button
             onClick={() => {
+              if (interval.current === null && user.trim() !== "") {
+                runSnake();
+              }
               if (directionRef.current[1] === 0) {
                 directionRef.current = [0, 1];
               }
