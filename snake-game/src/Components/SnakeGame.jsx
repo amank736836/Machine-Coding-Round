@@ -111,16 +111,16 @@ export default function SnakeGame() {
         "https://machine-coding-round-bsrq.onrender.com/snakeGame"
       );
       const scores = await data.json();
-      scores = [
-        {
-          "name" : "SampleData",
-          "score" : 0
-        },
-        
-      ]
       setAllScores(scores);
     } catch (error) {
       console.log(error);
+      const scores = [
+        {
+          name: "Error in fetching data",
+          score: null,
+        },
+      ];
+      setAllScores(scores);
     }
   };
 
@@ -269,15 +269,17 @@ export default function SnakeGame() {
           </button>
         </div>
       </div>
-      <div>
+      <div className="scoresContainer">
         <h3>Highest Scores</h3>
-        {AllScores.map((score, index) => (
-          <div key={index} className="score">
-            <p>
-              {index + 1}. {score.name} - {score.score}
-            </p>
-          </div>
-        ))}
+        <div className="scores">
+          {AllScores.map((score, index) => (
+            <div key={index} className="score">
+              <p>
+                {index + 1}. {score.name} - {score.score}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
