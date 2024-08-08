@@ -13,7 +13,6 @@ export default function SnakeGame() {
   const [user, setUser] = useState("");
   const [AllScores, setAllScores] = useState([]);
   const [alert, setAlert] = useState(false);
-  const [fr, setFr] = useState(0);  
 
   const directionRef = useRef([1, 0]);
   const interval = useRef(null);
@@ -87,7 +86,6 @@ export default function SnakeGame() {
 
   const handleDirection = (e) => {
     const key = e.key;
-    console.log(interval.current);
     if (interval.current === null && user.trim() !== "") {
       runSnake();
     }
@@ -113,12 +111,13 @@ export default function SnakeGame() {
       );
       const scores = await data.json();
       setAllScores(scores);
-      setFr(()=>{
-        return (scores.length / 5) + 1;
-      })
     } catch (error) {
       console.log(error);
       const scores = [
+        {
+          name: "Error in fetching data",
+          score: null,
+        },
         {
           name: "Error in fetching data",
           score: null,
@@ -275,9 +274,6 @@ export default function SnakeGame() {
       </div>
       <div
         className="scoresContainer"
-        style={{
-          gridTemplateColumns: `repeat(${fr}, 1fr)`,
-        }}
       >
         <h3>Highest Scores</h3>
         <div className="scores">
