@@ -29,17 +29,17 @@ const addScore = async (req, res) => {
       await newScore.save();
     }
 
-    const allScores = await Score.find().sort({ score: -1 })
-    // console.log(allScores);
+    // const allScores = await Score.find().sort({ score: -1 })
+    // // console.log(allScores);
 
-    if (allScores.length > 5) {
-      const scoresToRemove = allScores.slice(5);
-      for (let scoreToRemove of scoresToRemove) {
-        await Score.findByIdAndDelete(scoreToRemove._id);
-      }
-    }
+    // if (allScores.length > 5) {
+    //   const scoresToRemove = allScores.slice(5);
+    //   for (let scoreToRemove of scoresToRemove) {
+    //     await Score.findByIdAndDelete(scoreToRemove._id);
+    //   }
+    // }
 
-    res.status(201).json({ message: "Score added/updated successfully." , allScores});
+    res.status(201).json({ message: "Score added/updated successfully."});
   } catch (error) {
     res.status(400).json({ message: error.message });
   }
