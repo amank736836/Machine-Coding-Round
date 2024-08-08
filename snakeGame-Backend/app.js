@@ -9,7 +9,7 @@ const allowedOrigins = [
     'https://amank736836-snake.vercel.app',
     'https://snake-amank736836.vercel.app',
     'https://machine-coding-round-1.onrender.com',
-    'https://nagini.vercel.app/',
+    'https://nagini.vercel.app',
 ];
 
 app.use(cors({
