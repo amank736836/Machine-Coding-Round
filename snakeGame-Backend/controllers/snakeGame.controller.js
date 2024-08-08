@@ -69,7 +69,52 @@ const foulWords = [
   "nude",
   "porn",
   "masturbate",
-  "semen"
+  "semen",
+  "bastardos",
+  "cunt",
+  "motherfucker",
+  "dildo",
+  "faggy",
+  "faggot",
+  "gash",
+  "banger",
+  "clit",
+  "freak",
+  "kinky",
+  "skank",
+  "slutty",
+  "tranny",
+  "wanker",
+  "whore",
+  "smegma",
+  "shag",
+  "cocksucker",
+  "fap",
+  "titties",
+  "buttplug",
+  "douchebag",
+  "pussyhole",
+  "pissflaps",
+  "dickhead",
+  "pecker",
+  "rimjob",
+  "vagina",
+  "clunge",
+  "spunk",
+  "minge",
+  "crunt",
+  "dirty",
+  "jizz",
+  "knob",
+  "knobhead",
+  "spunk",
+  "asslick",
+  "shagger",
+  "faggotry",
+  "cockwomble",
+  "fucking",
+  "prickhead",
+  "shithead",
 ];
 
 const addScore = async (req, res) => {
@@ -77,10 +122,11 @@ const addScore = async (req, res) => {
 
   for (let foulWord of foulWords) {
     if (name.toLowerCase().includes(foulWord)) {
-      return res.status(400).json({ message: "Name contains inappropriate language." });
+      return res
+        .status(400)
+        .json({ message: "Name contains inappropriate language." });
     }
   }
-
 
   try {
     let existingScore = await Score.findOne({ name });
