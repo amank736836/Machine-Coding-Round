@@ -13,6 +13,7 @@ export default function SnakeGame() {
   const [user, setUser] = useState("");
   const [AllScores, setAllScores] = useState([]);
   const [alert, setAlert] = useState(false);
+  const [fr, setFr] = useState(0);  
 
   const directionRef = useRef([1, 0]);
   const interval = useRef(null);
@@ -112,6 +113,9 @@ export default function SnakeGame() {
       );
       const scores = await data.json();
       setAllScores(scores);
+      setFr(()=>{
+        return (scores.length / 5) + 1;
+      })
     } catch (error) {
       console.log(error);
       const scores = [
@@ -271,9 +275,9 @@ export default function SnakeGame() {
       </div>
       <div
         className="scoresContainer"
-        style={
-          AllScores.length < 5 ? { gridTemplateColumns: "repeat(1, 1fr)"} : { gridTemplateColumns: "repeat(2, 1fr)" }
-        }
+        style={{
+          gridTemplateColumns: `repeat(${fr}, 1fr)`,
+        }}
       >
         <h3>Highest Scores</h3>
         <div className="scores">
