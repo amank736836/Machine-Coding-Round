@@ -12,6 +12,10 @@ const getScore = async (req, res) => {
 const addScore = async (req, res) => {
   const { name, score } = req.body;
 
+  if (name.contains("and")) {
+    return res.status(400).json({ message: "Name cannot contain 'and'." });
+  }
+
   try {
     let existingScore = await Score.findOne({ name });
 
@@ -39,7 +43,7 @@ const addScore = async (req, res) => {
     //   }
     // }
 
-    res.status(201).json({ message: "Score added/updated successfully."});
+    res.status(201).json({ message: "Score added/updated successfully." });
   } catch (error) {
     res.status(400).json({ message: error.message });
   }
