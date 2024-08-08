@@ -88,3 +88,21 @@ button{
   font-size: larger;
   font-weight: bold;
 }
+
+.scores{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid black;
+}
+
+.score{
+  border: 1px solid black;
+  padding: 1px;
+}
+
+.scoresContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
