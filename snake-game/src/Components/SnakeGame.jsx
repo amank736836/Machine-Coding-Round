@@ -187,7 +187,10 @@ export default function SnakeGame() {
               className="user"
               value={user}
               onChange={(e) => {
-                setUser(e.target.value.substring(0, 20));
+                const value = e.target.value
+                  .replace(/[^a-zA-Z0-9]/g, "")
+                  .substring(0, 20);
+                setUser(value);
               }}
               onKeyDown={(e) => {
                 if (e.key === "Enter" && user.trim() !== "") {
@@ -273,9 +276,7 @@ export default function SnakeGame() {
           </button>
         </div>
       </div>
-      <div
-        className="scoresContainer"
-      >
+      <div className="scoresContainer">
         <h3>Highest Scores</h3>
         <div className="scores">
           {AllScores.map((score, index) => (
