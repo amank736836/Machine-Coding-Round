@@ -9,12 +9,78 @@ const getScore = async (req, res) => {
   }
 };
 
+const foulWords = [
+  "abuse",
+  "bastard",
+  "bitch",
+  "crap",
+  "damn",
+  "dick",
+  "douche",
+  "fag",
+  "fuck",
+  "idiot",
+  "moron",
+  "piss",
+  "prick",
+  "shit",
+  "slut",
+  "whore",
+  "chutiya",
+  "madarchod",
+  "bhosdike",
+  "lund",
+  "gandu",
+  "lavde",
+  "bhenchod",
+  "bhosdi",
+  "randi",
+  "jhant",
+  "gaand",
+  "choot",
+  "saala",
+  "haraami",
+  "haraamzada",
+  "kutta",
+  "kamina",
+  "kamine",
+  "chudail",
+  "chut",
+  "kutti",
+  "bhen ke lode",
+  "maderchod",
+  "cock",
+  "cum",
+  "jerk",
+  "pussy",
+  "tits",
+  "twat",
+  "orgasm",
+  "sex",
+  "nipple",
+  "asshole",
+  "fisting",
+  "suck",
+  "bukkake",
+  "blowjob",
+  "rimjob",
+  "pimp",
+  "escort",
+  "nude",
+  "porn",
+  "masturbate",
+  "semen"
+];
+
 const addScore = async (req, res) => {
   const { name, score } = req.body;
 
-  if (name.includes("and")) {
-    return res.status(400).json({ message: "Name cannot contain 'and'." });
+  for (let foulWord of foulWords) {
+    if (name.toLowerCase().includes(foulWord)) {
+      return res.status(400).json({ message: "Name contains inappropriate language." });
+    }
   }
+
 
   try {
     let existingScore = await Score.findOne({ name });
