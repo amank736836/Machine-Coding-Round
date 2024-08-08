@@ -274,9 +274,9 @@ export default function SnakeGame() {
         <div className="scores">
           {AllScores.map((score, index) => (
             <div key={index} className="score">
-              <p>
+              <div>
                 {index + 1}. {score.name} - {score.score}
-              </p>
+              </div>
             </div>
           ))}
         </div>
