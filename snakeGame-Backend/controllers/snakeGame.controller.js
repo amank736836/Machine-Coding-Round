@@ -12,7 +12,7 @@ const getScore = async (req, res) => {
 const addScore = async (req, res) => {
   const { name, score } = req.body;
 
-  if (name.contains("and")) {
+  if (name.includes("and")) {
     return res.status(400).json({ message: "Name cannot contain 'and'." });
   }
 
