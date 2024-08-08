@@ -133,7 +133,8 @@ const foulWords = [
   "kanjar",
   "kothi",
   "khotta",
-  "kuchra"
+  "kuchra",
+  "X","XXX"
 ];
 
 const addScore = async (req, res) => {
