@@ -111,6 +111,13 @@ export default function SnakeGame() {
         "https://machine-coding-round-bsrq.onrender.com/snakeGame"
       );
       const scores = await data.json();
+      scores = [
+        {
+          "name" : "SampleData",
+          "score" : 0
+        },
+        
+      ]
       setAllScores(scores);
     } catch (error) {
       console.log(error);
