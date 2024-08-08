@@ -97,7 +97,8 @@ button{
 
 .score{
   border: 1px solid black;
-  padding: 1px;
+  padding-left: 1px;
+  padding-right: 1px;
 }
 
 .scoresContainer{
