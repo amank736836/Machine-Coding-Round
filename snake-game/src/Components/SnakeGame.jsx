@@ -152,7 +152,8 @@ export default function SnakeGame() {
   return (
     <div className="container">
       <div className="title">
-        <div className="gameName">Snake Game</div>
+        <div className="gameName">Nagini</div>
+        <div>(from Harry Potter)</div>
         <div className="name">{user}</div>
         <div className="scoreCard">Score : {score.current}</div>
       </div>
