@@ -1,7 +1,4 @@
 const highestScoreSend = async ({ user, score }) => {
-  console.log("Highest Score Send");
-  console.log(user);
-  console.log(score);
   const data = fetch(
     "https://machine-coding-round-bsrq.onrender.com/snakeGame",
     {
@@ -10,7 +7,7 @@ const highestScoreSend = async ({ user, score }) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        name: user,
+        name: user.trim(),
         score: score,
       }),
     }
