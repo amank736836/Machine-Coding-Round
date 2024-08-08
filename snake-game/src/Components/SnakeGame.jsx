@@ -269,7 +269,12 @@ export default function SnakeGame() {
           </button>
         </div>
       </div>
-      <div className="scoresContainer">
+      <div
+        className="scoresContainer"
+        style={
+          AllScores.length < 5 ? { gridTemplateColumns: "repeat(1, 1fr)"} : { gridTemplateColumns: "repeat(2, 1fr)" }
+        }
+      >
         <h3>Highest Scores</h3>
         <div className="scores">
           {AllScores.map((score, index) => (
