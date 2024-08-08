@@ -81,7 +81,7 @@ export default function SnakeGame() {
   const updateLocalStorage = ({ user, score }) => {
     const scores = [...AllScores, { name: user, score }];
     scores.sort((a, b) => b.score - a.score);
-    setAllScores(scores.slice(0, 5));
+    setAllScores(scores.slice(0, 10));
   };
 
   const handleDirection = (e) => {
