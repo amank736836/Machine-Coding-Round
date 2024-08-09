@@ -264,12 +264,17 @@ const addScore = async (req, res) => {
         existingScore.score = score;
         await existingScore.save();
       } else {
+        await existingScore.save();
         return res
           .status(200)
           .json({ message: "Score not high enough to update." });
       }
     } else {
-      const newScore = new Score({ name, score , time: new Date().toLocaleString() });
+      const newScore = new Score({
+        name,
+        score,
+        time: new Date().toLocaleString(),
+      });
       await newScore.save();
     }
 
