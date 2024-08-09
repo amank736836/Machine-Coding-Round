@@ -3,8 +3,8 @@ const Score = require("../models/score.model.js");
 const highestScore = async (req, res) => {
   try {
     const scores = await Score.find()
-      .sort({ highestScore: -1 })
-      .sort({ score: -1 })
+    .sort({ score: -1 })
+    .sort({ highestScore: -1 })
       .limit(6);
     res.status(200).json(scores);
   } catch (err) {
