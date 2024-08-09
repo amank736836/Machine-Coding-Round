@@ -157,11 +157,13 @@ export default function SnakeGame() {
       const scores = [
         {
           name: "Error in fetching data",
-          score: null,
+          highestScore: null,
+          latestScore: null,
         },
         {
           name: "Error in fetching data",
-          score: null,
+          highestScore: null,
+          latestScore: null,
         },
       ];
       setLatestScores(scores);
@@ -326,7 +328,7 @@ export default function SnakeGame() {
             {AllScores.map((score, index) => (
               <div key={index} className="score">
                 <div>
-                  {index + 1}. {score.name} - {score.score}
+                  {index + 1}. {score.name} - {score.highestScore}
                 </div>
               </div>
             ))}
@@ -338,7 +340,7 @@ export default function SnakeGame() {
             {latestScores.map((score, index) => (
               <div key={index} className="score">
                 <div>
-                  {index + 1}. {score.name}
+                  {index + 1}. {score.name} - {score.latestScore}
                 </div>
               </div>
             ))}
