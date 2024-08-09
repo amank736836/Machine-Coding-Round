@@ -336,7 +336,7 @@ export default function SnakeGame() {
           </div>
         </div>
         <div>
-          <h3>Latest Activity</h3>
+          <h3>Latest Score</h3>
           <div className="scores">
             {latestScores.map((score, index) => (
               <div key={index} className="score">
