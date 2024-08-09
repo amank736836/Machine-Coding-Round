@@ -223,7 +223,7 @@ export default function SnakeGame() {
               value={user}
               onChange={(e) => {
                 const value = e.target.value
-                  .replace(/[^a-z0-9]/g, "")
+                  .replace(/[^a-zA-z0-9]/g, "")
                   .substring(0, 20);
                 setUser(value);
               }}
