@@ -8,6 +8,10 @@ const scoreSchema = new Schema(
       type: String,
       required: true,
     },
+    score: {
+      type: Number,
+      required: true,
+    },
     highestScore: {
       type: Number,
       default: 0,
@@ -20,7 +24,6 @@ const scoreSchema = new Schema(
       type: Number,
       default: 0,
     },
-
   },
   {
     timestamps: true,
