@@ -1,6 +1,6 @@
 const highestScoreSend = async ({ user, score }) => {
   const data = fetch(
-    "https://machine-coding-round-bsrq.onrender.com/snakeGame",
+    "https://machine-coding-round-bsrq.onrender.com/snakeGame/addScore",
     {
       method: "POST",
       headers: {
