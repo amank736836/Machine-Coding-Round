@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const { highestScore } = require("../controllers/snakeGame.controller");
 const Schema = mongoose.Schema;
 
 const scoreSchema = new Schema(
@@ -7,14 +8,19 @@ const scoreSchema = new Schema(
       type: String,
       required: true,
     },
-    score: {
+    highestScore: {
       type: Number,
-      required: true,
+      default: 0,
     },
-    time: {
-      type: String,
-      required: true,
+    latestScore: {
+      type: Number,
+      default: 0,
     },
+    visits: {
+      type: Number,
+      default: 0,
+    },
+
   },
   {
     timestamps: true,
