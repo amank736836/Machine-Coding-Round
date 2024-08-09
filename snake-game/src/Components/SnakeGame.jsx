@@ -328,7 +328,8 @@ export default function SnakeGame() {
             {AllScores.map((score, index) => (
               <div key={index} className="score">
                 <div>
-                  {index + 1}. {score.name} - {score.highestScore}
+                  {index + 1}. {score.name} -{" "}
+                  {score.highestScore ? score.highestScore : score.score}
                 </div>
               </div>
             ))}
@@ -340,7 +341,8 @@ export default function SnakeGame() {
             {latestScores.map((score, index) => (
               <div key={index} className="score">
                 <div>
-                  {index + 1}. {score.name} - {score.latestScore}
+                  {index + 1}. {score.name} -{" "}
+                  {score.latestScore ? score.latestScore : score.score}
                 </div>
               </div>
             ))}
