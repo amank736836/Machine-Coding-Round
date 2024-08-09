@@ -46,7 +46,7 @@ export default function SnakeGame() {
             .some(([x, y]) => x === newHead[0] && y === newHead[1])
         ) {
           highestScoreSend({ user, score: score.current });
-          updateLocalStorage({ user, score: score.current });
+          updateLocalScores({ user, score: score.current });
           console.log("Game Over");
           score.current = 0;
           return [...initialSnakeBody];
@@ -79,21 +79,6 @@ export default function SnakeGame() {
     }, Math.max(85 - score.current, 55));
   };
 
-  const updateLocalStorage = ({ user, score }) => {
-    setAllScores((prevScores) => {
-      const newScores = [...prevScores];
-      newScores.push({ name: user, score: score });
-      newScores.sort((a, b) => b.score - a.score);
-      newScores.slice(0, 5);
-      return newScores;
-    });
-    setLatestScores((prevScores) => {
-      const newScores = [{ name: user, score: score }, ...prevScores];
-      newScores.pop();
-      return newScores;
-    });
-  };
-
   const handleDirection = (e) => {
     const key = e.key;
     if (interval.current === null && user.trim() !== "") {
@@ -112,6 +97,29 @@ export default function SnakeGame() {
 
   const isSnakeBodyDiv = (xc, yc) => {
     return snakeBody.some(([x, y]) => x === xc && y === yc);
+  };
+
+  const updateLocalScores = ({ user, score }) => {
+    setAllScores((prevScores) => {
+      const newScores = [...prevScores];
+      newScores.push({ name: user, score: score });
+      newScores.sort((a, b) => b.score - a.score);
+      newScores.slice(0, 5);
+      return newScores;
+    });
+    setLatestScores((prevScores) => {
+      const newScores = prevScores.find((score) => {
+        if (score.name === user) {
+          score.score =
+            score.score < score.current ? score.current : score.score;
+          return true;
+        }
+      })
+        ? [...prevScores]
+        : [{ name: user, score: score }, ...prevScores];
+      newScores.slice(0, 5);
+      return newScores;
+    });
   };
 
   const HighestScores = async () => {
