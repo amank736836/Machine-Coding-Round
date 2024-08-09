@@ -329,7 +329,7 @@ export default function SnakeGame() {
               <div key={index} className="score">
                 <div>
                   {index + 1}. {score.name} -{" "}
-                  {score.highestScore ? score.highestScore : score.score}
+                  {score.highestScore > score.score ? score.highestScore : score.score}
                 </div>
               </div>
             ))}
