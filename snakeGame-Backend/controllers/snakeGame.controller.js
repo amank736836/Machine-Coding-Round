@@ -245,17 +245,22 @@ const foulWords = [
   "varsha",
   "vidya",
   "yashika",
+  "Harami",
 ];
 
 const addScore = async (req, res) => {
   const { name, score } = req.body;
 
+  const flag = false;
   for (let foulWord of foulWords) {
     if (name.toLowerCase().includes(foulWord)) {
-      return res
-        .status(400)
-        .json({ message: "Name contains inappropriate language." });
+      flag = true;
+      break;
     }
+  }
+
+  if (flag) {
+    name = "Anonymous";
   }
 
   try {
