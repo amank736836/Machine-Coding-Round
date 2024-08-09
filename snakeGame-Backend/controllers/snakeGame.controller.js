@@ -259,9 +259,9 @@ const addScore = async (req, res) => {
     let existingScore = await Score.findOne({ name });
 
     if (existingScore) {
+      existingScore.time = new Date().toLocaleString();
       if (score > existingScore.score) {
         existingScore.score = score;
-        existingScore.time = new Date().toLocaleString();
         await existingScore.save();
       } else {
         return res
