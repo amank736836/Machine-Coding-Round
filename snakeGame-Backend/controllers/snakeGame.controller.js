@@ -2,7 +2,7 @@ const Score = require("../models/score.model.js");
 
 const highestScore = async (req, res) => {
   try {
-    const scores = await Score.find().sort({ score: -1 }).limit(6);
+    const scores = await Score.find().sort({ highestScore: -1 }).limit(6);
     res.status(200).json(scores);
   } catch (err) {
     res.status(400).json({ message: err.message });
@@ -260,19 +260,16 @@ const addScore = async (req, res) => {
 
     if (existingScore) {
       existingScore.time = new Date().toLocaleString();
-      if (score > existingScore.score) {
-        existingScore.score = score;
-        await existingScore.save();
-      } else {
-        await existingScore.save();
-        return res
-          .status(200)
-          .json({ message: "Score not high enough to update." });
+      existingScore.latestScore = score;
+      if (score > existingScore.latestScore) {
+        existingScore.highestScore = score;
       }
+      await existingScore.save();
     } else {
       const newScore = new Score({
         name,
-        score,
+        highestScore: score,
+        latestScore: score,
         time: new Date().toLocaleString(),
       });
       await newScore.save();
