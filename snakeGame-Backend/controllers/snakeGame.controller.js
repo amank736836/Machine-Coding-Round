@@ -9,6 +9,14 @@ const getScore = async (req, res) => {
   }
 };
 
+const latestScore = async (req, res) => {
+  try {
+    const latestScores = await Score.find().sort({ _id: -1 }).limit(10); // Assuming the most recent scores have the highest _id
+    res.status(200).json(latestScores);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+};
 const foulWords = [
   "abuse",
   "bastard",
@@ -283,4 +291,5 @@ const addScore = async (req, res) => {
 module.exports = {
   getScore,
   addScore,
+  latestScore,
 };
