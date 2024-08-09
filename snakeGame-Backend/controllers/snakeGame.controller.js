@@ -11,7 +11,7 @@ const highestScore = async (req, res) => {
 
 const latestScore = async (req, res) => {
   try {
-    const latestScores = await Score.find().sort({ _id: -1 }).limit(6);
+    const latestScores = await Score.find().sort({ time: -1 }).limit(6);
     res.status(200).json(latestScores);
   } catch (err) {
     res.status(400).json({ message: err.message });
@@ -261,6 +261,7 @@ const addScore = async (req, res) => {
     if (existingScore) {
       if (score > existingScore.score) {
         existingScore.score = score;
+        existingScore.time = new Date().toLocaleString();
         await existingScore.save();
       } else {
         return res
@@ -268,7 +269,7 @@ const addScore = async (req, res) => {
           .json({ message: "Score not high enough to update." });
       }
     } else {
-      const newScore = new Score({ name, score });
+      const newScore = new Score({ name, score , time: new Date().toLocaleString() });
       await newScore.save();
     }
 
