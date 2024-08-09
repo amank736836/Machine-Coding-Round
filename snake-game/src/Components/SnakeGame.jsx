@@ -76,7 +76,7 @@ export default function SnakeGame() {
         copySnakeBody.unshift(newHead);
         return copySnakeBody;
       });
-    }, Math.max(85 - score.current, 55));
+    }, Math.max(95 - score.current, 55));
   };
 
   const handleDirection = (e) => {
