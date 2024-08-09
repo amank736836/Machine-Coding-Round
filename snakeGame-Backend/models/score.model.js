@@ -10,6 +10,10 @@ const scoreSchema = new Schema({
     type: Number,
     required: true,
   },
+  time : {
+    type: String,
+    required: true,
+  }
 });
 
 const Score = mongoose.model("Score", scoreSchema);
