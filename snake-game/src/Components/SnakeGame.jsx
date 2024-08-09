@@ -12,6 +12,7 @@ export default function SnakeGame() {
   const [snakeBody, setSnakeBody] = useState([...initialSnakeBody]);
   const [user, setUser] = useState("");
   const [AllScores, setAllScores] = useState([]);
+  const [latestScores, setLatestScores] = useState([]);
   const [alert, setAlert] = useState(false);
 
   const directionRef = useRef([1, 0]);
@@ -75,13 +76,22 @@ export default function SnakeGame() {
         copySnakeBody.unshift(newHead);
         return copySnakeBody;
       });
-    }, 85 - score.current);
+    }, Math.max(85 - score.current, 55));
   };
 
   const updateLocalStorage = ({ user, score }) => {
-    const scores = [...AllScores, { name: user, score }];
-    scores.sort((a, b) => b.score - a.score);
-    setAllScores(scores.slice(0, 10));
+    setAllScores((prevScores) => {
+      const newScores = [...prevScores];
+      newScores.push({ name: user, score: score });
+      newScores.sort((a, b) => b.score - a.score);
+      newScores.slice(0, 5);
+      return newScores;
+    });
+    setLatestScores((prevScores) => {
+      const newScores = [{ name: user, score: score }, ...prevScores];
+      newScores.pop();
+      return newScores;
+    });
   };
 
   const handleDirection = (e) => {
@@ -104,10 +114,10 @@ export default function SnakeGame() {
     return snakeBody.some(([x, y]) => x === xc && y === yc);
   };
 
-  const highestScores = async () => {
+  const HighestScores = async () => {
     try {
       const data = await fetch(
-        "https://machine-coding-round-bsrq.onrender.com/snakeGame"
+        "https://machine-coding-round-bsrq.onrender.com/snakeGame/highestScore"
       );
       const scores = await data.json();
       setAllScores(scores);
@@ -127,6 +137,29 @@ export default function SnakeGame() {
     }
   };
 
+  const LatestScores = async () => {
+    try {
+      const data = await fetch(
+        "https://machine-coding-round-bsrq.onrender.com/snakeGame/latestScore"
+      );
+      const scores = await data.json();
+      setLatestScores(scores);
+    } catch (error) {
+      console.log(error);
+      const scores = [
+        {
+          name: "Error in fetching data",
+          score: null,
+        },
+        {
+          name: "Error in fetching data",
+          score: null,
+        },
+      ];
+      setLatestScores(scores);
+    }
+  };
+
   useEffect(() => {
     if (score.current === 0) {
       clearInterval(interval.current);
@@ -139,7 +172,8 @@ export default function SnakeGame() {
   }, [score.current]);
 
   useEffect(() => {
-    highestScores();
+    HighestScores();
+    LatestScores();
     window.addEventListener("keydown", handleDirection);
 
     return () => {
@@ -176,6 +210,7 @@ export default function SnakeGame() {
                       setAlert(true);
                     }
                   : () => {
+                      setAlert(false);
                       runSnake();
                     }
               }
@@ -277,15 +312,29 @@ export default function SnakeGame() {
         </div>
       </div>
       <div className="scoresContainer">
-        <h3>Highest Scores</h3>
-        <div className="scores">
-          {AllScores.map((score, index) => (
-            <div key={index} className="score">
-              <div>
-                {index + 1}. {score.name} - {score.score}
+        <div>
+          <h3>Highest Scores</h3>
+          <div className="scores">
+            {AllScores.map((score, index) => (
+              <div key={index} className="score">
+                <div>
+                  {index + 1}. {score.name} - {score.score}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+        </div>
+        <div>
+          <h3>Latest Scores</h3>
+          <div className="scores">
+            {latestScores.map((score, index) => (
+              <div key={index} className="score">
+                <div>
+                  {index + 1}. {score.name} - {score.score}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
