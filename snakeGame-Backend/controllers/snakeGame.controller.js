@@ -5,7 +5,7 @@ const highestScore = async (req, res) => {
     const scores = await Score.find()
       .sort({ score: -1 })
       .sort({ highestScore: -1 })
-      .limit(6);
+      .limit(5);
     res.status(200).json(scores);
   } catch (err) {
     res.status(400).json({ message: err.message });
@@ -14,7 +14,7 @@ const highestScore = async (req, res) => {
 
 const latestScore = async (req, res) => {
   try {
-    const latestScores = await Score.find().sort({ updatedAt: -1 }).limit(6);
+    const latestScores = await Score.find().sort({ updatedAt: -1 }).limit(5);
     res.status(200).json(latestScores);
   } catch (err) {
     res.status(400).json({ message: err.message });
