@@ -265,20 +265,20 @@ const addScore = async (req, res) => {
       existingScore.time = new Date();
       existingScore.latestScore = score;
       existingScore.visits += 1;
-      if (score > existingScore.highestScore && score > existingScore.score) {
+      if (score > existingScore.highestScore) {
         existingScore.highestScore = score;
-        existingScore.score = score;
-      }else if (score > existingScore.highestScore) {
-        existingScore.highestScore = score;
+        if (score > existingScore.score) {
+          existingScore.score = score;
+        }
       }
       await existingScore.save();
     } else {
       const newScore = new Score({
         name,
+        score,
         highestScore: score,
         latestScore: score,
         visits: 1,
-        time: new Date().toLocaleString(),
       });
       await newScore.save();
     }
