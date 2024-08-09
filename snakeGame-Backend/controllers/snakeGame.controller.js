@@ -262,7 +262,7 @@ const addScore = async (req, res) => {
     let existingScore = await Score.findOne({ name });
 
     if (existingScore) {
-      existingScore.time = new Date().toLocaleString();
+      existingScore.time = new Date();
       existingScore.latestScore = score;
       existingScore.visits += 1;
       if (score > existingScore.highestScore && score > existingScore.score) {
