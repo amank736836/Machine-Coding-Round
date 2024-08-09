@@ -268,9 +268,7 @@ const addScore = async (req, res) => {
       if (score > existingScore.highestScore && score > existingScore.score) {
         existingScore.highestScore = score;
         existingScore.score = score;
-      } else if (score > existingScore.score) {
-        existingScore.score = score;
-      } else if (score > existingScore.highestScore) {
+      }else if (score > existingScore.highestScore) {
         existingScore.highestScore = score;
       }
       await existingScore.save();
