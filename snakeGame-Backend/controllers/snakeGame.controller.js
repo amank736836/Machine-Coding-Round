@@ -247,6 +247,8 @@ const foulWords = [
 const addScore = async (req, res) => {
   const { name, score } = req.body;
 
+  name = name.toLowerCase();
+
   for (let foulWord of foulWords) {
     if (name.toLowerCase().includes(foulWord)) {
       return res
