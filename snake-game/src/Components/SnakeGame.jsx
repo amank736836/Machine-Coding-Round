@@ -196,10 +196,10 @@ export default function SnakeGame() {
   return (
     <div className="container">
       <div className="title">
-        <div className="gameName">Nagini</div>
-        <div>(from Harry Potter)</div>
-        <div className="name">{user}</div>
-        <div className="scoreCard">Score : {score.current}</div>
+        <div className="gameName">🐍Nagini🐍</div>
+        <div>(from 🤺Harry Potter👓)</div>
+        <div className="name">{user}{" "}😎</div>
+        <div className="scoreCard">Score : {score.current} 💯</div>
       </div>
       <div
         className="container-game"
@@ -228,7 +228,7 @@ export default function SnakeGame() {
             />
             <input
               type="text"
-              placeholder="Enter your name"
+              placeholder="Enter your name ✍️"
               className="user"
               value={user}
               onChange={(e) => {
@@ -243,7 +243,7 @@ export default function SnakeGame() {
                 }
               }}
             />
-            {alert && <p className="alert">Please enter your name</p>}
+            {alert && <p className="alert">Please enter your name 🙏</p>}
           </div>
         )}
 
@@ -323,7 +323,7 @@ export default function SnakeGame() {
       </div>
       <div className="scoresContainer">
         <div>
-          <h3>Highest Scores</h3>
+          <h3>Highest Scores 🙌</h3>
           <div className="scores">
             {AllScores.map((score, index) => (
               <div key={index} className="score">
@@ -336,7 +336,7 @@ export default function SnakeGame() {
           </div>
         </div>
         <div>
-          <h3>Latest Score</h3>
+          <h3>Latest Score 🕔</h3>
           <div className="scores">
             {latestScores.map((score, index) => (
               <div key={index} className="score">
