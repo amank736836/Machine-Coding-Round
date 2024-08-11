@@ -18,10 +18,12 @@
 }
 
 .input{
+  margin: 20px;
+}
+
+.todo__container{
   display: flex;
-  flex-direction: column;
   align-items: center;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 20px;
+  justify-content: center;
+  flex-direction: column;
 }
