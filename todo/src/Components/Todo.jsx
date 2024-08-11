@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
-
+import { useCallback, useEffect, useState } from "react";
+import Item from "./Item";
 export default function Todo() {
   const [task, setTask] = useState("");
-  const [todos, setTodos] = useState(JSON.parse(localStorage.getItem("todos")) || []);
+  const [todos, setTodos] = useState(
+    JSON.parse(localStorage.getItem("todos")) || []
+  );
   //[{id: time, value: "machine coding round", isCompleted: false}]
 
   useEffect(() => {
@@ -37,11 +39,7 @@ export default function Todo() {
     }
   };
 
-  const handleDelete = (id) => {
-    setTodos((prev) => prev.filter((todo) => todo.id !== id));
-  };
-
-  const handleComplete = (id) => {
+  const handleComplete = useCallback((id) => {
     setTodos((prev) => {
       return prev.map((todo) => {
         if (todo.id === id) {
@@ -53,10 +51,28 @@ export default function Todo() {
         return todo;
       });
     });
-  };
+  }, []);
+
+  const handleDelete = useCallback((id) => {
+    setTodos((prev) => prev.filter((todo) => todo.id !== id));
+  }, []);
+
+  const handleUpdate = useCallback((id, updatedValue) => {
+    setTodos((prev) => {
+      return prev.map((todo) => {
+        if (todo.id === id) {
+          return {
+            ...todo,
+            value: updatedValue,
+          };
+        }
+        return todo;
+      });
+    });
+  }, []);
 
   return (
-    <div>
+    <div className="todo__container">
       <div className="input">
         <input
           type="text"
@@ -64,38 +80,25 @@ export default function Todo() {
           onChange={handleChange}
           onKeyDown={handleKeyDown}
         />
-        <button onClick={addTodo}>Add Task</button>
+        <button
+          style={{
+            margin: "10px",
+          }}
+          onClick={addTodo}
+        >
+          Add Task
+        </button>
       </div>
       <div>
-        {todos.map((todo) => {
+        {todos.map((todo, index) => {
           return (
-            <div key={todo.id} className="todos">
-              <div className="todo">
-                <span
-                  style={{
-                    textDecoration: todo.isCompleted ? "line-through" : "none",
-                  }}
-                >
-                  {todo.value}
-                </span>
-              </div>
-              <div>
-                <span
-                  onClick={() => {
-                    handleComplete(todo.id);
-                  }}
-                >
-                  ✅
-                </span>
-                <span
-                  onClick={() => {
-                    handleDelete(todo.id);
-                  }}
-                >
-                  ⚔️
-                </span>
-              </div>
-            </div>
+            <Item
+              key={todo.id}
+              todo={todo}
+              handleComplete={handleComplete}
+              handleDelete={handleDelete}
+              handleUpdate={handleUpdate}
+            />
           );
         })}
       </div>
