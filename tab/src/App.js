@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Tabs from "./Components/Tabs";
+
+const tabsData = [
+  {
+    label: "Profile",
+    content: <div>Profile Info Content</div>,
+  },
+  {
+    label: "Dashboard",
+    content: <div>Dashboard Content</div>,
+  },
+  {
+    label: "Settings",
+    content: <div>Settings Content</div>,
+  },
+  {
+    label: "Invoice",
+    content: <div>Invoice Content</div>,
+  },
+];
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const onTabChangeHandler = (index) => {
+    console.log("Tab changed to index: ", index);
+  };
+
+  return <Tabs tabsData={tabsData} onChange={onTabChangeHandler} />;
 }
 
 export default App;
