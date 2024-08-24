@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import data from "./data.json";
+import data from "../data.json";
 
 function ImageCarousel() {
   const [index, setIndex] = useState(0);
