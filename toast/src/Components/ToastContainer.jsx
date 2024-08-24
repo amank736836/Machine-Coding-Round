@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 export default function ToastContainer() {
   const [toasts, setToasts] = useState([]);
   const timersRef = useRef({});
+
   const handleClose = (id) => {
     setToasts((prevToasts) => {
       return prevToasts.filter((toast) => toast.id !== id);
@@ -10,6 +11,7 @@ export default function ToastContainer() {
     clearTimeout(timersRef.current[id]);
     delete timersRef.current[id];
   };
+
   const handleShow = (message, type, time = 2500) => {
     const id = new Date().getTime();
     setToasts([...toasts, { id, message, type }]);
@@ -48,13 +50,13 @@ export default function ToastContainer() {
           Success Toast
         </button>
         <button
-          onClick={() => handleShow("Info Toast", "info",4000)}
+          onClick={() => handleShow("Info Toast", "info", 4000)}
           className="info"
         >
           Info Toast
         </button>
         <button
-          onClick={() => handleShow("Warning Toast", "warning" , 7000)}
+          onClick={() => handleShow("Warning Toast", "warning", 7000)}
           className="warning"
         >
           Warning Toast
