@@ -1,12 +1,9 @@
 import { useState } from "react";
 import ReplyComment from "./ReplyComment";
+import { useCommentsContext } from "./commentsContext";
 
-export default function CommentBox({
-  comment,
-  allComments,
-  addComment,
-  deleteComment,
-}) {
+export default function CommentBox({ comment }) {
+  const { comments, deleteComment } = useCommentsContext();
   const [showReplyBox, setShowReplyBox] = useState(false);
   const handleReply = () => {
     setShowReplyBox(!showReplyBox);
@@ -28,23 +25,11 @@ export default function CommentBox({
         </div>
       </div>
       {showReplyBox && (
-        <ReplyComment
-          setShowReplyBox={setShowReplyBox}
-          addComment={addComment}
-          parentId={comment.id}
-        />
+        <ReplyComment setShowReplyBox={setShowReplyBox} parentId={comment.id} />
       )}
       <div className="nested-comments">
         {comment.children.map((childId) => {
-          return (
-            <CommentBox
-              key={childId}
-              comment={allComments[childId]}
-              allComments={allComments}
-              addComment={addComment}
-              deleteComment={deleteComment}
-            />
-          );
+          return <CommentBox key={childId} comment={comments[childId]} />;
         })}
       </div>
     </div>
