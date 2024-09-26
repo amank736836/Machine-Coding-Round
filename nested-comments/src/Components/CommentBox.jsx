@@ -1,8 +1,8 @@
 import { useState } from "react";
 import ReplyComment from "./ReplyComment";
-import { useCommentsContext } from "./commentsContext";
+import { useCommentsContext } from "../Context/commentsContext";
 
-export default function CommentBox({ comment }) {
+export default function CommentBox({ id }) {
   const { comments, deleteComment } = useCommentsContext();
   const [showReplyBox, setShowReplyBox] = useState(false);
   const handleReply = () => {
@@ -11,25 +11,22 @@ export default function CommentBox({ comment }) {
   return (
     <div className="comment-container">
       <div className="comment-header">
-        <p className="comment-value">{comment.value}</p>
+        <p className="comment-value">{comments[id].value}</p>
         <div className="comment-actions">
           <button className="reply-btn" onClick={handleReply}>
             {showReplyBox ? "Cancel" : "Reply"}
           </button>
-          <button
-            className="delete-btn"
-            onClick={() => deleteComment(comment.id)}
-          >
+          <button className="delete-btn" onClick={() => deleteComment(id)}>
             Delete
           </button>
         </div>
       </div>
       {showReplyBox && (
-        <ReplyComment setShowReplyBox={setShowReplyBox} parentId={comment.id} />
+        <ReplyComment setShowReplyBox={setShowReplyBox} parentId={id} />
       )}
       <div className="nested-comments">
-        {comment.children.map((childId) => {
-          return <CommentBox key={childId} comment={comments[childId]} />;
+        {comments[id].children.map((childId) => {
+          return <CommentBox key={childId} id={childId} />;
         })}
       </div>
     </div>
