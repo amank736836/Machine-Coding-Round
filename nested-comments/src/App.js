@@ -37,7 +37,6 @@ function App() {
       return newComments;
     });
   };
-  console.log(comments);
 
   return (
     <CommentBox
