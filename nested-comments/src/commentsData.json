@@ -1,0 +1,34 @@
+{
+  "comments": {
+    "1": {
+      "id": 1,
+      "parentId": null,
+      "value": "Hello Folks, How you doing?",
+      "children": [2, 3]
+    },
+    "2": {
+      "id": 2,
+      "parentId": 1,
+      "value": "Doing good, How about you?",
+      "children": []
+    },
+    "3": {
+      "id": 3,
+      "parentId": 1,
+      "value": "Not So Good",
+      "children": [4]
+    },
+    "4": {
+      "id": 4,
+      "parentId": 3,
+      "value": "Why? What happened?",
+      "children": [5]
+    },
+    "5": {
+      "id": 5,
+      "parentId": 4,
+      "value": "I lost my job",
+      "children": []
+    }
+  }
+}
