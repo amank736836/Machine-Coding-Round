@@ -1,24 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import CommentBox from "./Components/CommentBox";
+import { useState } from "react";
+import commentsData from "./commentsData.json";
 
 function App() {
+  const [comments, setComments] = useState(commentsData.comments);
+
+  const addComment = (value, parentId) => {
+    const newId = Date.now();
+    const newComment = {
+      id: newId,
+      parentId,
+      value,
+      children: [],
+    };
+    setComments((prevComments) => {
+      prevComments[parentId].children.push(newId);
+      return { ...prevComments, [newId]: newComment };
+    });
+  };
+
+  const deleteComment = (id) => {
+    const parentId = comments[id].parentId;
+    setComments((prevComments) => {
+      const newComments = { ...prevComments };
+      if (parentId) {
+        const parent = newComments[parentId];
+        parent.children = parent.children.filter((childId) => childId !== id);
+      }
+      const queue = [id];
+      while (queue.length) {
+        const currentId = queue.pop();
+        queue.push(...newComments[currentId].children);
+        delete newComments[currentId];
+      }
+      return newComments;
+    });
+  };
+  console.log(comments);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CommentBox
+      comment={comments[1]}
+      allComments={comments}
+      addComment={addComment}
+      deleteComment={deleteComment}
+    />
   );
 }
 
