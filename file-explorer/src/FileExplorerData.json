@@ -1,0 +1,160 @@
+{
+  "fileExplorerData": {
+    "1": {
+      "name": "File Explorer",
+      "type": "folder",
+      "parentId": null,
+      "children": [2, 5, 18, 23, 24, 25, 26]
+    },
+    "2": {
+      "name": "node_modules",
+      "type": "folder",
+      "parentId": 1,
+      "children": [3, 4]
+    },
+    "3": {
+      "name": "react",
+      "type": "folder",
+      "parentId": 2,
+      "children": []
+    },
+    "4": {
+      "name": "react-dom",
+      "type": "folder",
+      "parentId": 2,
+      "children": []
+    },
+    "5": {
+      "name": "src",
+      "type": "folder",
+      "parentId": 1,
+      "children": [6, 10, 11, 12, 13, 14, 15, 16, 17]
+    },
+    "6": {
+      "name": "components",
+      "type": "folder",
+      "parentId": 5,
+      "children": [7, 8, 9]
+    },
+    "7": {
+      "name": "Header.js",
+      "type": "file",
+      "parentId": 6,
+      "children": []
+    },
+    "8": {
+      "name": "Footer.js",
+      "type": "file",
+      "parentId": 6,
+      "children": []
+    },
+    "9": {
+      "name": "Sidebar.js",
+      "type": "file",
+      "parentId": 6,
+      "children": []
+    },
+    "10": {
+      "name": "App.js",
+      "type": "file",
+      "parentId": 5,
+      "children": []
+    },
+    "11": {
+      "name": "index.js",
+      "type": "file",
+      "parentId": 5,
+      "children": []
+    },
+    "12": {
+      "name": "serviceWorker.js",
+      "type": "file",
+      "parentId": 5,
+      "children": []
+    },
+    "13": {
+      "name": "index.css",
+      "type": "file",
+      "parentId": 5,
+      "children": []
+    },
+    "14": {
+      "name": "App.test.js",
+      "type": "file",
+      "parentId": 5,
+      "children": []
+    },
+    "15": {
+      "name": "logo.svg",
+      "type": "file",
+      "parentId": 5,
+      "children": []
+    },
+    "16": {
+      "name": "setupTests.js",
+      "type": "file",
+      "parentId": 5,
+      "children": []
+    },
+    "17": {
+      "name": "reportWebVitals.js",
+      "type": "file",
+      "parentId": 5,
+      "children": []
+    },
+    "18": {
+      "name": "public",
+      "type": "folder",
+      "parentId": 1,
+      "children": [19, 20, 21, 22]
+    },
+    "19": {
+      "name": "index.html",
+      "type": "file",
+      "parentId": 18,
+      "children": []
+    },
+    "20": {
+      "name": "favicon.ico",
+      "type": "file",
+      "parentId": 18,
+      "children": []
+    },
+    "21": {
+      "name": "manifest.json",
+      "type": "file",
+      "parentId": 18,
+      "children": []
+    },
+    "22": {
+      "name": "robots.txt",
+      "type": "file",
+      "parentId": 18,
+      "children": []
+    },
+    "23": {
+      "name": "package.json",
+      "type": "file",
+      "parentId": 1,
+      "children": []
+    },
+    "24": {
+      "name": "README.md",
+      "type": "file",
+      "parentId": 1,
+      "children": []
+    },
+    "25": {
+      "name": ".gitignore",
+      "type": "file",
+      "parentId": 1,
+      "children": []
+    },
+    "26": {
+      "name": "package-lock.json",
+      "type": "file",
+      "parentId": 1,
+      "children": []
+    }
+  }
+}
