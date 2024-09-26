@@ -1,8 +1,11 @@
 import "./App.css";
 import FileExplorer from "./Components/FileExplorer";
-import data from "./data";
+import FileExplorerContextWrapper from "./context/FileExplorerContext";
 function App() {
-  return <FileExplorer folderData={data} />;
+  return;
+  <FileExplorerContextWrapper>
+    <FileExplorer id={1} />;
+  </FileExplorerContextWrapper>;
 }
 
 export default App;
