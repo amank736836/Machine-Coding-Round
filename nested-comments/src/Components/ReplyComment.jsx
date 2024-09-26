@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useCommentsContext } from "./commentsContext";
+import { useCommentsContext } from "../Context/commentsContext";
 
 export default function ReplyComment({ setShowReplyBox, parentId }) {
   const { addComment } = useCommentsContext();
