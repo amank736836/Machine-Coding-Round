@@ -39,68 +39,57 @@
     "7": {
       "name": "Header.js",
       "type": "file",
-      "parentId": 6,
-      "children": []
+      "parentId": 6
     },
     "8": {
       "name": "Footer.js",
       "type": "file",
-      "parentId": 6,
-      "children": []
+      "parentId": 6
     },
     "9": {
       "name": "Sidebar.js",
       "type": "file",
-      "parentId": 6,
-      "children": []
+      "parentId": 6
     },
     "10": {
       "name": "App.js",
       "type": "file",
-      "parentId": 5,
-      "children": []
+      "parentId": 5
     },
     "11": {
       "name": "index.js",
       "type": "file",
-      "parentId": 5,
-      "children": []
+      "parentId": 5
     },
     "12": {
       "name": "serviceWorker.js",
       "type": "file",
-      "parentId": 5,
-      "children": []
+      "parentId": 5
     },
     "13": {
       "name": "index.css",
       "type": "file",
-      "parentId": 5,
-      "children": []
+      "parentId": 5
     },
     "14": {
       "name": "App.test.js",
       "type": "file",
-      "parentId": 5,
-      "children": []
+      "parentId": 5
     },
     "15": {
       "name": "logo.svg",
       "type": "file",
-      "parentId": 5,
-      "children": []
+      "parentId": 5
     },
     "16": {
       "name": "setupTests.js",
       "type": "file",
-      "parentId": 5,
-      "children": []
+      "parentId": 5
     },
     "17": {
       "name": "reportWebVitals.js",
       "type": "file",
-      "parentId": 5,
-      "children": []
+      "parentId": 5
     },
     "18": {
       "name": "public",
@@ -111,50 +100,42 @@
     "19": {
       "name": "index.html",
       "type": "file",
-      "parentId": 18,
-      "children": []
+      "parentId": 18
     },
     "20": {
       "name": "favicon.ico",
       "type": "file",
-      "parentId": 18,
-      "children": []
+      "parentId": 18
     },
     "21": {
       "name": "manifest.json",
       "type": "file",
-      "parentId": 18,
-      "children": []
+      "parentId": 18
     },
     "22": {
       "name": "robots.txt",
       "type": "file",
-      "parentId": 18,
-      "children": []
+      "parentId": 18
     },
     "23": {
       "name": "package.json",
       "type": "file",
-      "parentId": 1,
-      "children": []
+      "parentId": 1
     },
     "24": {
       "name": "README.md",
       "type": "file",
-      "parentId": 1,
-      "children": []
+      "parentId": 1
     },
     "25": {
       "name": ".gitignore",
       "type": "file",
-      "parentId": 1,
-      "children": []
+      "parentId": 1
     },
     "26": {
       "name": "package-lock.json",
       "type": "file",
-      "parentId": 1,
-      "children": []
+      "parentId": 1
     }
   }
 }
