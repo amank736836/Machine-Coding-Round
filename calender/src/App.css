@@ -36,3 +36,68 @@
     transform: rotate(360deg);
   }
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.time-slot {
+  width: 100%;
+  height: 5rem;
+  border-bottom: 1px solid lightgray;
+  padding: 2rem;
+}
+
+.day-view {
+  position: relative;
+}
+
+.day-view-header {
+  position: absolute;
+  left: 6rem;
+  width: 1px;
+  height: 100%;
+  background-color: lightgrey;
+}
+
+.event {
+  position: absolute;
+  background-color: lightblue;
+  left: 6rem;
+  width: calc(100% - 6rem);
+  border: 1px solid gray;
+}
+
+.event-title {
+  position: absolute;
+  left: 2rem;
+  color: gray;
+  font-size: 1rem;
+  font-weight: Bold;
+}
+
+.event-description {
+  position: absolute;
+  left: 25rem;
+  color: gray;
+  font-size: 1rem;
+  font-weight: Bold;
+}
+
+.event-duration {
+  position: absolute;
+  right: 15rem;
+  color: gray;
+  font-size: 1rem;
+  font-weight: Bold;
+}
+
+.event-time {
+  position: absolute;
+  right: 2rem;
+  color: gray;
+  font-size: 1rem;
+  font-weight: Bold;
+}
