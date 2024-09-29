@@ -1,0 +1,228 @@
+[
+    {
+      "id": 1,
+      "start": "06:00:00",
+      "end": "06:15:00",
+      "title": "Wake Up and Freshen Up",
+      "description": "Wake up, brush teeth, and get fresh",
+      "location": "Home",
+      "category": "Personal"
+    },
+    {
+      "id": 2,
+      "start": "06:15:00",
+      "end": "06:45:00",
+      "title": "Light Exercise",
+      "description": "Morning stretches, yoga, or light workout",
+      "location": "Home",
+      "category": "Personal"
+    },
+    {
+      "id": 3,
+      "start": "06:45:00",
+      "end": "07:00:00",
+      "title": "Shower and Get Ready",
+      "description": "Take a shower and get dressed",
+      "location": "Home",
+      "category": "Personal"
+    },
+    {
+      "id": 4,
+      "start": "07:00:00",
+      "end": "07:30:00",
+      "title": "Breakfast",
+      "description": "Eat breakfast",
+      "location": "Home",
+      "category": "Personal"
+    },
+    {
+      "id": 5,
+      "start": "07:30:00",
+      "end": "07:45:00",
+      "title": "Plan the Day",
+      "description": "Plan tasks for the day, check emails, and schedule",
+      "location": "Home",
+      "category": "Work"
+    },
+    {
+      "id": 6,
+      "start": "07:45:00",
+      "end": "09:15:00",
+      "title": "Deep Work Session",
+      "description": "Focus on high-priority coding tasks",
+      "location": "Home Office",
+      "category": "Work"
+    },
+    {
+      "id": 7,
+      "start": "09:15:00",
+      "end": "09:30:00",
+      "title": "Short Break",
+      "description": "Stretch, grab a snack, or take a quick break",
+      "location": "Home",
+      "category": "Personal"
+    },
+    {
+      "id": 8,
+      "start": "09:30:00",
+      "end": "10:00:00",
+      "title": "Debugging and Code Review",
+      "description": "Review and debug code",
+      "location": "Home Office",
+      "category": "Work"
+    },
+    {
+      "id": 9,
+      "start": "10:00:00",
+      "end": "10:30:00",
+      "title": "Team Stand-Up Meeting",
+      "description": "Virtual stand-up meeting with the team",
+      "location": "Virtual",
+      "category": "Work"
+    },
+    {
+      "id": 10,
+      "start": "10:30:00",
+      "end": "11:00:00",
+      "title": "Client Meeting",
+      "description": "Discuss project updates with the client",
+      "location": "Virtual",
+      "category": "Work"
+    },
+    {
+      "id": 11,
+      "start": "11:00:00",
+      "end": "12:00:00",
+      "title": "Coding and Feature Development",
+      "description": "Work on a new feature",
+      "location": "Home Office",
+      "category": "Work"
+    },
+    {
+      "id": 12,
+      "start": "12:00:00",
+      "end": "12:30:00",
+      "title": "Lunch Break",
+      "description": "Have lunch",
+      "location": "Home",
+      "category": "Personal"
+    },
+    {
+      "id": 13,
+      "start": "12:30:00",
+      "end": "13:00:00",
+      "title": "Post-Lunch Relaxation",
+      "description": "Take a short walk or relax",
+      "location": "Home",
+      "category": "Personal"
+    },
+    {
+      "id": 14,
+      "start": "13:00:00",
+      "end": "14:30:00",
+      "title": "Focused Coding Session",
+      "description": "Work on project tasks or coding",
+      "location": "Home Office",
+      "category": "Work"
+    },
+    {
+      "id": 15,
+      "start": "14:30:00",
+      "end": "14:45:00",
+      "title": "Quick Break",
+      "description": "Take a 15-minute break",
+      "location": "Home",
+      "category": "Personal"
+    },
+    {
+      "id": 16,
+      "start": "14:45:00",
+      "end": "15:30:00",
+      "title": "Debugging and Fixing Bugs",
+      "description": "Resolve bugs and troubleshoot issues",
+      "location": "Home Office",
+      "category": "Work"
+    },
+    {
+      "id": 17,
+      "start": "15:30:00",
+      "end": "16:00:00",
+      "title": "Team Collaboration",
+      "description": "Collaborate with team members, peer code reviews",
+      "location": "Virtual",
+      "category": "Work"
+    },
+    {
+      "id": 18,
+      "start": "16:00:00",
+      "end": "16:30:00",
+      "title": "Afternoon Break",
+      "description": "Relax with a snack or listen to music",
+      "location": "Home",
+      "category": "Personal"
+    },
+    {
+      "id": 19,
+      "start": "16:30:00",
+      "end": "17:30:00",
+      "title": "Gaming Session",
+      "description": "Play video games to unwind",
+      "location": "Home",
+      "category": "Entertainment"
+    },
+    {
+      "id": 20,
+      "start": "17:30:00",
+      "end": "18:00:00",
+      "title": "Family Time",
+      "description": "Spend quality time with family or friends",
+      "location": "Home",
+      "category": "Personal"
+    },
+    {
+      "id": 21,
+      "start": "18:00:00",
+      "end": "19:00:00",
+      "title": "Dinner",
+      "description": "Have dinner with family",
+      "location": "Home",
+      "category": "Personal"
+    },
+    {
+      "id": 22,
+      "start": "19:00:00",
+      "end": "20:30:00",
+      "title": "Movie/TV Show",
+      "description": "Watch a movie or catch up on a TV show",
+      "location": "Home",
+      "category": "Entertainment"
+    },
+    {
+      "id": 23,
+      "start": "20:30:00",
+      "end": "21:00:00",
+      "title": "Check Emails and Final Review",
+      "description": "Check emails and wrap up pending tasks",
+      "location": "Home Office",
+      "category": "Work"
+    },
+    {
+      "id": 24,
+      "start": "21:00:00",
+      "end": "22:00:00",
+      "title": "Reading or Relaxation",
+      "description": "Read a book or meditate to relax",
+      "location": "Home",
+      "category": "Personal"
+    },
+    {
+      "id": 25,
+      "start": "22:00:00",
+      "end": "06:00:00",
+      "title": "Sleep",
+      "description": "Get a good night's sleep",
+      "location": "Home",
+      "category": "Personal"
+    }
+  ]
+  
