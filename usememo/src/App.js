@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import useCustomMemo from "./Hooks/useCustomMemo";
+
+function expensiveCalculation(num) {
+  console.log("Running expensiveCalculation", num);
+  for (let i = 0; i < 100000; i++) {}
+  return num * 2;
+}
 
 function App() {
+  const [count, setCount] = useState(0);
+  const [input, setInput] = useState("");
+
+  const doubleValue = useCustomMemo(() => expensiveCalculation(count), [count]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>useMemo Example</h1>
+      <h2>Count: {count}</h2>
+      <h2>Double Value: {doubleValue}</h2>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+      <input
+        type="text"
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+      />
     </div>
   );
 }
