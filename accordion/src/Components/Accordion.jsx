@@ -5,7 +5,6 @@ function AccordionContainer({ data, setLimit }) {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        // console.log(entries);
         if (entries[0].isIntersecting) {
           observer.unobserve(entries[0].target);
           setLimit((prevLimit) => prevLimit + 5);
