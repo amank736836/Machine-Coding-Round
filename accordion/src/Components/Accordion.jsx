@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Accordion from "./Accordion";
 
 function AccordionContainer({ data, setLimit }) {
   useEffect(() => {
