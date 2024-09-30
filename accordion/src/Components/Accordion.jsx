@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import ParticularAccordion from "./ParticularAccordion";
 
 function AccordionContainer({ data, setLimit }) {
   useEffect(() => {
@@ -24,18 +25,10 @@ function AccordionContainer({ data, setLimit }) {
     };
   }, [data, setLimit]);
 
-  const [show, setShow] = useState(false);
-
   return (
     <div>
       {data.map((item, index) => (
-        <div className="accordion" key={index}>
-          <h1>
-            {item.question}
-            <span onClick={() => setShow(!show)}>{show ? "➖" : "➕"}</span>
-          </h1>
-          {show ? <h4>{item.answer}</h4> : null}
-        </div>
+        <ParticularAccordion key={index} item={item} />
       ))}
     </div>
   );
