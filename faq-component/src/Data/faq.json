@@ -1,0 +1,276 @@
+{
+  "faqs": [
+    {
+      "question": "What is FrontEnd Development?",
+      "answer": "Front-end web development, also known as client-side development is the practice of producing HTML, CSS and JavaScript for a website or Web Application so that a user can see and interact with them directly."
+    },
+    {
+      "question": "What is BackEnd Development?",
+      "answer": "Back-end development refers to the server-side of an application and everything that communicates between the database and the browser. Back-end developers are responsible for server-side web application logic and integration of the work front-end developers do."
+    },
+    {
+      "question": "What is Full Stack Development?",
+      "answer": "A full stack developer is a web developer or engineer who works with both the front and back ends of a website or application—meaning they can tackle projects that involve databases, building user-facing websites, or even work with clients during the planning phase of projects."
+    },
+    {
+      "question": "What is the difference between FrontEnd and BackEnd Development?",
+      "answer": "Front-end development refers to constructing what a user sees when they load a web application – the content, design and how you interact with it. This is done with three codes – HTML, CSS and JavaScript. Back-end development controls what goes on behind the scenes of a web application. A back-end often uses a database to generate the front-end."
+    },
+    {
+      "question": "What is the difference between FrontEnd and Full Stack Development?",
+      "answer": "A front-end developer is responsible for the look and feel of a site, while a full stack developer is responsible for the site’s functionality as well. Full stack developers are familiar with HTML, CSS, JavaScript, and one or more back end languages."
+    },
+    {
+      "question": "What is the difference between BackEnd and Full Stack Development?",
+      "answer": "A back-end developer is responsible for server-side web application logic and integration of the work front-end developers do. A full stack developer is a web developer or engineer who works with both the front and back ends of a website or application."
+    },
+    {
+      "question": "What is the difference between FrontEnd, BackEnd and Full Stack Development?",
+      "answer": "Front-end development refers to constructing what a user sees when they load a web application – the content, design and how you interact with it. This is done with three codes – HTML, CSS and JavaScript. Back-end development controls what goes on behind the scenes of a web application. A back-end often uses a database to generate the front-end. A full stack developer is a web developer or engineer who works with both the front and back ends of a website or application."
+    },
+    {
+      "question": "What is the difference between Web Development and Software Development?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Software development is the process of conceiving, specifying, designing, programming, documenting, testing, and bug fixing involved in creating and maintaining applications, frameworks, or other software components."
+    },
+    {
+      "question": "What is the difference between Web Development and Mobile Development?",
+      "answer": "Web development refers to the building, creating, and maintaining of websites. Mobile development refers to the creation of apps for use on mobile devices. Both web and mobile development require a knowledge of programming languages, such as HTML, CSS, and JavaScript."
+    },
+    {
+      "question": "What is the difference between Web Development and Game Development?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Game development is the process of creating video games and games for computers, mobile devices, and other platforms."
+    },
+    {
+      "question": "What is the difference between Web Development and Data Science?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Data science is an interdisciplinary field that uses scientific methods, processes, algorithms and systems to extract knowledge and insights from structured and unstructured data."
+    },
+    {
+      "question": "What is the difference between Web Development and Machine Learning?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Machine learning is an application of artificial intelligence (AI) that provides systems the ability to automatically learn and improve from experience without being explicitly programmed."
+    },
+    {
+      "question": "What is the difference between Web Development and Artificial Intelligence?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Artificial intelligence is the simulation of human intelligence processes by machines, especially computer systems."
+    },
+    {
+      "question": "What is the difference between Web Development and Cyber Security?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Cyber security is the practice of defending computers, servers, mobile devices, electronic systems, networks, and data from malicious attacks."
+    },
+    {
+      "question": "What is the difference between Web Development and Cloud Computing?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Cloud computing is the delivery of computing services—including servers, storage, databases, networking, software, analytics, and intelligence—over the Internet to offer faster innovation, flexible resources, and economies of scale."
+    },
+    {
+      "question": "What is the difference between Web Development and Internet of Things?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. The Internet of Things (IoT) is a system of interrelated computing devices, mechanical and digital machines, objects, animals or people that are provided with unique identifiers and the ability to transfer data over a network without requiring human-to-human or human-to-computer interaction."
+    },
+    {
+      "question": "What is the difference between Web Development and Blockchain?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Blockchain is a system in which a record of transactions made in bitcoin or another cryptocurrency are maintained across several computers that are linked in a peer-to-peer network."
+    },
+    {
+      "question": "What is the difference between Web Development and Quantum Computing?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Quantum computing is the exploitation of collective properties of quantum states, such as superposition and entanglement, to perform computation."
+    },
+    {
+      "question": "What is the difference between Web Development and Augmented Reality?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Augmented reality is an interactive experience of a real-world environment where the objects that reside in the real world are enhanced by computer-generated perceptual information."
+    },
+    {
+      "question": "What is the difference between Web Development and Virtual Reality?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Virtual reality is an interactive computer-generated experience taking place within a simulated environment."
+    },
+    {
+      "question": "What is the difference between Web Development and Mixed Reality?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Mixed reality is the merging of real and virtual worlds to produce new environments and visualizations where physical and digital objects co-exist and interact in real time."
+    },
+    {
+      "question": "What is the difference between Web Development and Artificial Neural Networks?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Artificial neural networks are computing systems vaguely inspired by the biological neural networks that constitute animal brains."
+    },
+    {
+      "question": "What is the difference between Web Development and Deep Learning?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Deep learning is a subset of machine learning in artificial intelligence (AI) that has networks capable of learning unsupervised from data that is unstructured or unlabeled."
+    },
+    {
+      "question": "What is the difference between Web Development and Natural Language Processing?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Natural language processing is a subfield of linguistics, computer science, and artificial intelligence concerned with the interactions between computers and human language, in particular how to program computers to process and analyze large amounts of natural language data."
+    },
+    {
+      "question": "What is the difference between Web Development and Computer Vision?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Computer vision is an interdisciplinary scientific field that deals with how computers can gain high-level understanding from digital images or videos."
+    },
+    {
+      "question": "What is the difference between Web Development and Robotics?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Robotics is an interdisciplinary branch of engineering and science that includes mechanical engineering, electronic engineering, information engineering, computer science, and others."
+    },
+    {
+      "question": "What is the difference between Web Development and Cloud Robotics?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Cloud robotics is an emerging field of robotics rooted in cloud computing, cloud storage, and other Internet technologies centered around the benefits of converged infrastructure and shared services."
+    },
+    {
+      "question": "What is the difference between Web Development and Human-Computer Interaction?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Human-computer interaction is a discipline concerned with the design, evaluation and implementation of interactive computing systems for human use and with the study of major phenomena surrounding them."
+    },
+    {
+      "question": "What is the difference between Web Development and User Experience Design?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. User experience design is the process of creating products that provide meaningful and relevant experiences to users."
+    },
+    {
+      "question": "What is the difference between Web Development and User Interface Design?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. User interface design is the design of user interfaces for machines and software, such as computers, home appliances, mobile devices, and other electronic devices, with the focus on maximizing usability and the user experience."
+    },
+    {
+      "question": "What is the difference between Web Development and Information Architecture Design?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Information architecture design is the structural design of shared information environments; the art and science of organizing and labelling websites, intranets, online communities and software to support usability and findability."
+    },
+    {
+      "question": "What is the difference between Web Development and Interaction Design?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Interaction design is the design of interactive products and services in which a designer’s focus goes beyond the item in development to include the way users will interact with it."
+    },
+    {
+      "question": "What is the difference between Web Development and Visual Design?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Visual design is the use of imagery, color, shapes, typography, and form to enhance usability and improve the user experience."
+    },
+    {
+      "question": "What is the difference between Web Development and Graphic Design?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Graphic design is the process of visual communication and problem-solving through the use of typography, photography, iconography and illustration."
+    },
+    {
+      "question": "What is the difference between Web Development and Motion Graphics Design?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Motion graphics design is a subset of graphic design in that it uses graphic design principles in a filmmaking or video production context through the use of animation or filmic techniques."
+    },
+    {
+      "question": "What is the difference between Web Development and User Experience Research?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. User experience research is the process of studying user needs and requirements, and then designing a product that meets those needs."
+    },
+    {
+      "question": "What is the difference between Web Development and User Interface Research?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. User interface research is the process of studying user needs and requirements, and then designing a product that meets those needs."
+    },
+    {
+      "question": "What is the difference between Web Development and Information Architecture Research?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Information architecture research is the process of studying user needs and requirements, and then designing a product that meets those needs."
+    },
+    {
+      "question": "What is the difference between Web Development and Interaction Design Research?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Interaction design research is the process of studying user needs and requirements, and then designing a product that meets those needs."
+    },
+    {
+      "question": "What is the difference between Web Development and Visual Design Research?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Visual design research is the process of studying user needs and requirements, and then designing a product that meets those needs."
+    },
+    {
+      "question": "What is the difference between Web Development and Graphic Design Research?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Graphic design research is the process of studying user needs and requirements, and then designing a product that meets those needs."
+    },
+    {
+      "question": "What is the difference between Web Development and Motion Graphics Design Research?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Motion graphics design research is the process of studying user needs and requirements, and then designing a product that meets those needs."
+    },
+    {
+      "question": "What is the difference between Web Development and User Experience Testing?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. User experience testing is the process of evaluating a product by testing it with representative users."
+    },
+    {
+      "question": "What is the difference between Web Development and User Interface Testing?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. User interface testing is the process of evaluating a product by testing it with representative users."
+    },
+    {
+      "question": "What is the difference between Web Development and Information Architecture Testing?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Information architecture testing is the process of evaluating a product by testing it with representative users."
+    },
+    {
+      "question": "What is the difference between Web Development and Interaction Design Testing?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Interaction design testing is the process of evaluating a product by testing it with representative users."
+    },
+    {
+      "question": "What is the difference between Web Development and Visual Design Testing?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Visual design testing is the process of evaluating a product by testing it with representative users."
+    },
+    {
+      "question": "What is the difference between Web Development and Graphic Design Testing?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Graphic design testing is the process of evaluating a product by testing it with representative users."
+    },
+    {
+      "question": "What is the difference between Web Development and Motion Graphics Design Testing?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Motion graphics design testing is the process of evaluating a product by testing it with representative users."
+    },
+    {
+      "question": "What is the difference between Web Development and User Experience Evaluation?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. User experience evaluation is the process of evaluating a product by testing it with representative users."
+    },
+    {
+      "question": "What is the difference between Web Development and User Interface Evaluation?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. User interface evaluation is the process of evaluating a product by testing it with representative users."
+    },
+    {
+      "question": "What is the difference between Web Development and Information Architecture Evaluation?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Information architecture evaluation is the process of evaluating a product by testing it with representative users."
+    },
+    {
+      "question": "What is the difference between Web Development and Interaction Design Evaluation?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Interaction design evaluation is the process of evaluating a product by testing it with representative users."
+    },
+    {
+      "question": "What is the difference between Web Development and Visual Design Evaluation?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Visual design evaluation is the process of evaluating a product by testing it with representative users."
+    },
+    {
+      "question": "What is the difference between Web Development and Graphic Design Evaluation?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Graphic design evaluation is the process of evaluating a product by testing it with representative users."
+    },
+    {
+      "question": "What is the difference between Web Development and Motion Graphics Design Evaluation?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Motion graphics design evaluation is the process of evaluating a product by testing it with representative users."
+    },
+    {
+      "question": "What is the difference between Web Development and User Experience Optimization?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. User experience optimization is the process of evaluating a product by testing it with representative users."
+    },
+    {
+      "question": "What is the difference between Web Development and User Interface Optimization?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. User interface optimization is the process of evaluating a product by testing it with representative users."
+    },
+    {
+      "question": "What is the difference between Web Development and Information Architecture Optimization?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Information architecture optimization is the process of evaluating a product by testing it with representative users."
+    },
+    {
+      "question": "What is the difference between Web Development and Interaction Design Optimization?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Interaction design optimization is the process of evaluating a product by testing it with representative users."
+    },
+    {
+      "question": "What is the difference between Web Development and Visual Design Optimization?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Visual design optimization is the process of evaluating a product by testing it with representative users."
+    },
+    {
+      "question": "What is the difference between Web Development and Graphic Design Optimization?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Graphic design optimization is the process of evaluating a product by testing it with representative users."
+    },
+    {
+      "question": "What is the difference between Web Development and Motion Graphics Design Optimization?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Motion graphics design optimization is the process of evaluating a product by testing it with representative users."
+    },
+    {
+      "question": "What is the difference between Web Development and User Experience Implementation?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. User experience implementation is the process of evaluating a product by testing it with representative users."
+    },
+    {
+      "question": "What is the difference between Web Development and User Interface Implementation?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. User interface implementation is the process of evaluating a product by testing it with representative users."
+    },
+    {
+      "question": "What is the difference between Web Development and Information Architecture Implementation?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Information architecture implementation is the process of evaluating a product by testing it with representative users."
+    },
+    {
+      "question": "What is the difference between Web Development and Interaction Design Implementation?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Interaction design implementation is the process of evaluating a product by testing it with representative users."
+    },
+    {
+      "question": "What is the difference between Web Development and Visual Design Implementation?",
+      "answer": "Web development is the building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience. Visual design implementation is the process of evaluating a product by testing it with representative users."
+    }
+  ]
+}
