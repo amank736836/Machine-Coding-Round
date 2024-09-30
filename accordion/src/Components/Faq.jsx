@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Accordion from "./Accordion";
 import data from "../data.json";
 import AccordionContainer from "./Accordion";
 
@@ -15,7 +14,7 @@ function Faq() {
   return (
     <div>
       <h1>Frequently Asked Questions</h1>
-      <Accordion data={mainData} setLimit={setLimit} />
+      <AccordionContainer data={mainData} setLimit={setLimit} />
     </div>
   );
 }
