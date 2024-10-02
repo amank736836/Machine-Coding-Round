@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+}
+
+.column {
+  background: #f0f0f0;
+  padding: 1rem;
+  width: 450px;
+  min-height: 300;
+  margin: 8px;
+}
+
+.row {
+  -webkit-user-select: none;
+  user-select: none;
+  margin: 0 0 8px 0;
+  background-color: rgb(192, 0, 0);
+  cursor: move;
+  padding: 16px;
+}
