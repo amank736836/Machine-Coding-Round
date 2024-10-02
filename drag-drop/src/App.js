@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import DragAndDrop from "./components/DragAndDrop";
+
+const initialData = {
+  Todo: [
+    "Design UI mockups",
+    "Set up project repository",
+    "Write unit test",
+    "Integrate Payment Gateway",
+  ],
+  InProgress: ["Develop authentication flow", "Implement responsive design"],
+  Completed: [
+    "Set up CI/CD pipeline",
+    "Conduct code review",
+    "Deploy initial version to staging",
+  ],
+};
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <DragAndDrop initialState={initialData} />;
 }
 
 export default App;
