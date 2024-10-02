@@ -4,7 +4,7 @@ import useCustomMemo from "./Hooks/useCustomMemo";
 
 function expensiveCalculation(num) {
   console.log("Running expensiveCalculation", num);
-  for (let i = 0; i < 100000; i++) {}
+  for (let i = 0; i < 100000000; i++) {}
   return num * 2;
 }
 
