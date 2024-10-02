@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import "./App.css";
+import useThrottle from "./hooks/useThrottling";
 
 function App() {
+  const [top, setTop] = useState(0);
+  const throttledValue = useThrottle(top, 1000);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setTop(window.scrollY);
+    };
+
+    document.addEventListener("scroll", handleScroll);
+
+    return () => {
+      document.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ height: "1000rem" }}>
+      <div
+        style={{
+          position: "fixed",
+          top: "0rem",
+        }}
+      >
+        <h1>Throttling in Action</h1>
+        <hr />
+        <h2>Normal : {top}</h2>
+        <hr />
+        <h2>Throttled : {throttledValue}</h2>
+      </div>
     </div>
   );
 }
