@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import useDebounce from "./hooks/useDebounce";
 
 function App() {
+  const [search, setSearch] = useState("");
+  const debounceValue = useDebounce(search, 2000);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Custom Hook</h1>
+      <h2>useDebounce</h2>
+      <br />
+      <input
+        type="text"
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+        placeholder="Debounced input"
+      />
+      <hr />
+      <h2>
+        Normal input: <span>{search}</span>
+      </h2>
+      <hr />
+      <h2>
+        Debounced input: <span>{debounceValue}</span>
+      </h2>
+      <hr />
     </div>
   );
 }
